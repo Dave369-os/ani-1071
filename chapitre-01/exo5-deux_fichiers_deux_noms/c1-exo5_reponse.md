@@ -1,0 +1,1 @@
+CONCLUSION: Le fichier source et le programme n'ont aucun lien direct quand il s'agit de leur nom. Il est juste a noter que le nom du programme est defini via la compilation, donc le nom du fichier source ne definie pas forcement celui du programme.
