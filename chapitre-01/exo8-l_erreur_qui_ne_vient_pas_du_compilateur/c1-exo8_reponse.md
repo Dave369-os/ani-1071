@@ -1,0 +1,7 @@
+## Rapport:
+la premiere compilation(clang++ -c c1-exo8_main.cpp) reussit car le processus ou s'arrete la chaine est la compilation dont le role est de controler les erreurs sematiques et syntaxiques de notre code source, que la fonction appele aie ete declaree, apres analyse, le compilateur ne trouve aucune erreur aussi bien sur le plan syntaxique que sur le plan semantique du code et produit donc un fichier nomme 'c1-exo8_main.o' contenant du code en langage machine.
+
+La deuxieme compilaton(clang++ c1-exo8_main.cpp -o main) ne fonctionne pas car toutes les etapes de la chaine de compilationsont necessaires dont l'edition de liens. cette etapes a pour fonction de linker les bibliotheques et les fonctions declarees en inserant le code source de chaque entite declaree dans le fichier executable, cette etape cherchant le contenu de la fonction 'calculer' et ne la trouvant pas affiche l'erreur 'C:/msys64/ucrt64/bin/ld: C:/Users/user/AppData/Local/Temp/c1-exo8_main-161eb6.o:c1-exo8_main.cpp:(.text+0x17): undefinedreference to `calculer()'
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)'.
+
+Dans le premier cas c'est le compilateur qui parle et dans le deuxieme c'est le linker.
