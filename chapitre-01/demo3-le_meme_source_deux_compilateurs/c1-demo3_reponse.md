@@ -1,0 +1,3 @@
+## Rapport:
+Le present rapport est soumis avec 2 ficiers tests(afin de garantir la veracite de la recherche), le premier fichier(test_1.exe) etant le resultat de la compilation a l'aide de clang++ occupe une taille de 71Ko sur le disque local hote du present test alors que le fichier resultant de la compilation a l'aide de g++ occupe un espace de 78Ko sur ce meme disque. A noter que les deux executables produisent le meme resultat.  
+Il est alors a conclure que le langage garantit le resultat voulu mais pas l'espace a utiliser pour mener a bien ce resultat.
