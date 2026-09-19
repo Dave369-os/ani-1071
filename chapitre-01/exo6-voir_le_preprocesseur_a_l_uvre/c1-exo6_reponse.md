@@ -23,3 +23,4 @@ int main(){
 
 ## Reponses aux remarques de l'enseignant:
 Des excuses sont presentees a l'encadrant du fait de la presence de multiples fautes lors de la redactions de rapports aussi bien de vocabulaire que de grammaire... Des efforst s'imposeront pour ne plus commettre les memes erreurs. De plus, les caracteres speciaux correspondant a la redaction en langue francaise sont absents du fait de l'utilisation d'un clavier anglais dont la modification pourrait boulverser notre facon de travailler.
+* NB : il se pourrait que certaines lignes de code soient interpretees par des logiciels du fait de l'origine di fichier actuel(Markdown).
