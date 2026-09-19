@@ -2,7 +2,7 @@
 
 int main(){
     printf("TCHINDA\n");
-    printf("OLEMBE");
+    printf("OLEMBE\n");
     return 0;
 
 }
