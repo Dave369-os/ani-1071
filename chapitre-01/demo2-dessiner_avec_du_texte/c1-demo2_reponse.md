@@ -16,12 +16,10 @@ int main(){
 }
 
 # Resutat:
-####################
-#                  #
-#                  #
-#                  #
-#                  #
-#                  #
-####################
- 
-il se peut que le present fichier n'affiche pas toute la figure en raison de l'action du logiciel d'interpretation de fichiers markdown.
+ ####################
+\#                  #
+\#                  #
+\#                  #
+\#                  #
+\#                  #
+ ####################
