@@ -5,21 +5,21 @@ Le compilateur utilise pour cette operation est clang++ dans le terminal gitbash
 #include <cstdio>
 
 int main(){
-    printf("####################\n");
-    printf("#                  #\n");
-    printf("#                  #\n");
-    printf("#                  #\n");
-    printf("#                  #\n");
-    printf("#                  #\n");
-    printf("####################\n");
-    return 0;
-}
+    printf("####################\n");  
+    printf("#                  #\n");  
+    printf("#                  #\n");  
+    printf("#                  #\n");  
+    printf("#                  #\n");  
+    printf("#                  #\n");  
+    printf("####################\n");  
+    return 0;  
+}  
 
 # Resutat:
- ####################
-\#                  #
-\#                  #
-\#                  #
-\#                  #
-\#                  #
- ####################
+ ####################  
+\#                  #  
+\#                  #  
+\#                  #  
+\#                  #  
+\#                  #  
+ ####################  
