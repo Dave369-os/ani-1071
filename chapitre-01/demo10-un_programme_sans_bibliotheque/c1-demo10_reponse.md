@@ -14,6 +14,15 @@ Il est donc a remarquer que des elements ont ete ajoutes dans le deuxieme progra
 Apres l'execution du deuxieme programme suite a la compilation($ clang++ test.cpp -o main) on a:  
 $ ./bonjour
 bonjour  
-Apres l'execution du deuxieme programme apres la compilation ($ clang++ bonjour.cpp -o bonjour) on a:
+
+avec la commande 'echo' on a:
+$ echo $?
+0
+
+Apres l'execution du premier programme apres la compilation ($ clang++ bonjour.cpp -o bonjour) on a:
 $ ./main.exe
+
+rien ne s'affiche, mais apres l'utilisation de la commande 'echo', on a:
+$ echo $?
+7
 ```
