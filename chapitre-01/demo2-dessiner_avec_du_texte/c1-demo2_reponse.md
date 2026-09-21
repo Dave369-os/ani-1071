@@ -2,8 +2,8 @@
 Le compilateur utilise pour cette operation est clang++ dans le terminal gitbash, le code elabore pour l'obtension du resultat contient douze lignes.  
 
 # Code:
-#include <cstdio>
 ```
+#include <cstdio>
 int main(){
     printf("####################\n");  
     printf("#                  #\n");  
