@@ -11,7 +11,7 @@ Il est donc a remarquer que des elements ont ete ajoutes dans le deuxieme progra
 -rw-r--r-- 1 user 197121   642 Sep 19 22:44 c1-demo10_reponse.md
 -rwxr-xr-x 1 user 197121 37666 Sep 19 22:20 main.exe*
 -rw-r--r-- 1 user 197121    29 Sep 19 22:20 test.cpp
-Apres l'execution du deuxieme programme suite a la compilation($ clang++ test.cpp -o main) on a:  
+Apres l'execution du premier programme suite a la compilation($ clang++ test.cpp -o main) on a:  
 $ ./bonjour
 bonjour  
 
@@ -19,7 +19,7 @@ avec la commande 'echo' on a:
 $ echo $?
 0
 
-Apres l'execution du premier programme apres la compilation ($ clang++ bonjour.cpp -o bonjour) on a:
+Apres l'execution du deuxieme programme apres la compilation ($ clang++ bonjour.cpp -o bonjour) on a:
 $ ./main.exe
 
 rien ne s'affiche, mais apres l'utilisation de la commande 'echo', on a:
