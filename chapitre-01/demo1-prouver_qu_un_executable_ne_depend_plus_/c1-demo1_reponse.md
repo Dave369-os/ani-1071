@@ -5,6 +5,10 @@ Apres l'execution($ ./main) du programme suite a la compilation($ clang++ test.c
 Resultat apres execution: 
 $ ./main
 Hello World
+
+Presentation des fichiers actifs:
+$ ls
+c1-demo1_reponse.md  test.cpp
 ```
 
 * NB: Le terminal utilise est gitbash et le compilateur clang++.
