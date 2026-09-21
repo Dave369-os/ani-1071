@@ -15,4 +15,6 @@ $ ./test.exe && echo pair
 $ ./test.exe && echo pair
 10210
 pair
+
+Cette ligne ressemble a un systeme de construction car elle enchaine compilation, test, action et s'arrete des qu'une etape echoue.
 ```
