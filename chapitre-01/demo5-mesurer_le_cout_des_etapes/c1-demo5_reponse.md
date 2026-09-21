@@ -24,28 +24,28 @@ user    0m0.030s
 sys     0m0.139s
 
 ```
-# Premier cas(fichier a une en-tete)
+# deuxieme cas(fichier a une en-tete)
 ```
 - Avec '-E'
 
 $ time clang++ -E test2.cpp
-real    0m51.215s
-user    0m0.092s
-sys     0m0.060s
+real    0m1.371s
+user    0m0.015s
+sys     0m0.061s
 
 - Avec '-c'
 $ time clang++ -c test2.cpp
 
-real    0m1.801s
-user    0m0.015s
-sys     0m0.107s
+real    0m1.367s
+user    0m0.031s
+sys     0m0.045s
 
 - Compilation complete
 $ time clang++ test2.cpp -o test2
 
-real    0m1.919s
-user    0m0.030s
-sys     0m0.107s
+real    0m1.352s
+user    0m0.015s
+sys     0m0.076s
 ```
 
 ## Tableau recapitulatif
@@ -53,11 +53,11 @@ sys     0m0.107s
 -------------|-------------------------------------|--------------------------------------|
              |    temps avec fichier a 1 en-tete   |    temps avec fichier a 10 en-tetes  |
 -------------|-------------------------------------|--------------------------------------|
-clang++ -E   |         0m3.258s                    |           0m51.215s                  |
+clang++ -E   |         0m3.258s                    |           0m1.371s                  |
 -------------|-------------------------------------|--------------------------------------|
-clang++ -c   |         0m0.731s                    |           0m1.801s                   |
+clang++ -c   |         0m0.731s                    |           0m1.367s                   |
 -------------|-------------------------------------|--------------------------------------|
-compilation  |         0m1.074s                    |           0m1.919s                   |
+compilation  |         0m1.074s                    |           0m1.352s                   |
 complete     |                                     |                                      |
 -------------|-------------------------------------|--------------------------------------|
 ```
