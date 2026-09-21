@@ -18,3 +18,22 @@ total 154
 -rwxr-xr-x 1 user 197121 72563 Sep 20 10:30 test_1.exe*
 -rwxr-xr-x 1 user 197121 79653 Sep 20 10:30 test_2.exe*
 ```
+La sortie des deux compilateur est:
+- premier cas(clang++):
+```
+user@DESKTOP-DNO62US MINGW64 /d/anime/z/ani-1071/ani-1071/chapitre-01/demo3-le_meme_source_deux_compilateurs (main)
+$ ./test1.exe
+Hello World
+user@DESKTOP-DNO62US MINGW64 /d/anime/z/ani-1071/ani-1071/chapitre-01/demo3-le_meme_source_deux_compilateurs (main)
+$ echo $?
+0
+```
+- Deuxieme cas(g++)
+```
+user@DESKTOP-DNO62US MINGW64 /d/anime/z/ani-1071/ani-1071/chapitre-01/demo3-le_meme_source_deux_compilateurs (main)
+$ ./test2.exe
+Hello World
+user@DESKTOP-DNO62US MINGW64 /d/anime/z/ani-1071/ani-1071/chapitre-01/demo3-le_meme_source_deux_compilateurs (main)
+$ echo $?
+0
+```
