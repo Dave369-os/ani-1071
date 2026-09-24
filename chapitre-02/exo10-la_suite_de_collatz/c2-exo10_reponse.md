@@ -52,3 +52,17 @@ Le style du code — signalé, sans coûter de points
 la est juste mentionne le fichier source a depose et pas le fichier rapport, il est vrai que quand juste un fichier de rapport est demande, je le depose avec le code source pour confirmer la veracite de mon etude, alors j'aimerais savoir si a partir de maintenant quand juste un fichier source est demande je suis dans l'obligation de l'accompagner d'un rapport
 Merci d'avance.
 ```
+Un test a ete effectue avec pour entier d'entree '1', le resultat apres recompilation et execution(car il a fallu relancer le programme et le recompiler d'abord car l'executable a ete supprime pour deporter le projet sur Github) donne:
+```
+$ clang++ c2-exo10_main.cpp -o main
+
+user@DESKTOP-DNO62US MINGW64 /d/anime/z/ani-1071/ani-1071/chapitre-02/exo10-la_suite_de_collatz (main)
+$ ./main
+entrez un entier superieur a 1 
+1
+
+0 etapes ont ete necessaires pour arriver a 1.
+```
+ Le resultat affiche est "0 etapes ont ete necessaires pour arriver a 1.", ce aui est bien vrai.
+ Il serait contre intuitif de modifier le programme pour qu'il prevoit un singulier car a la base il est concu pour etre simple et demande un entier positif superieur a 1
+ ```
