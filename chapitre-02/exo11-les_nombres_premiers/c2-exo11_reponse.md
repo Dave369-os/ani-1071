@@ -62,7 +62,7 @@ bool premier = true;
 Il suffit de tester les valeurs jusqu'a la racine carree car les diviseurs vont de paire:
 si un nombre n est le diviseur d'un entier, alors le nombre n2 dont la multiplication par n donne l'entier est a l'oppose de n par rapport a la racine de cet entier. De ce fait, deux membres d'une meme paire ne peuvent etre en meme temps ni inferieurs ni superieurs a la racine de l'entier. D'ou la simplicite de s'arrete a la racine carree.
 ```
-Ainsi, le meme test a ete effectue en testant les valeurs jusqu'a la racine carree et les resultats apres compilaton et execution sont:
+Ainsi, le meme test a ete effectue en testant les valeurs jusqu'a la racine carree et les resultats apres compilaton et execution sont(ici a ete utilisee ls fonction sqrt de la bibliotheque cmath):
 
 ```
 $ clang++ c2-exo11_main.cpp -o main
