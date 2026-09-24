@@ -1,7 +1,7 @@
 # Rapport
 ```
-Le code ecrit premettant de recuperer cinq(5) entiers et affer leur somme et leur moyenne s'etend sur quinze(15) lignes et affiche la moyenne avec 3 chiffres  apres la virgule.
-Apres compilation et execution avec clang++ dans le terminal gitbash de ce code on obtient avec les nombres 7, 8, 9, 10:
+Le code ecrit premettant de recuperer cinq(5) entiers et afficherer leur somme et leur moyenne s'ettend sur quinze(15) lignes et affiche la moyenne avec 3 chiffres  apres la virgule.
+Apres compilation et execution avec clang++ dans le terminal gitbash de ce code on obtient avec les nombres 7, 8, 9, 10 puis 10 a nouveau:
 
 user@DESKTOP-DNO62US MINGW64 /d/anime/z/ani-1071/ani-1071/chapitre-02/exo2-somme_et_moyenne (main)
 $ clang++ main.cpp -o main
