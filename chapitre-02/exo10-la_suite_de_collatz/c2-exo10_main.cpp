@@ -14,7 +14,7 @@ int main(){
         i = i + 1;
         printf("%d\t", n);
     }
-    printf("\n%d etapes ont ete necessires pour arriver a 1.", i);
+    printf("\n%d etapes ont ete necessaires pour arriver a 1.", i);
 
     return 0;
 }
