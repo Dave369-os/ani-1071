@@ -119,3 +119,5 @@ bool premier = true;
     return 0;
 }
 ```
+
+Les valeurs sont identiques a celles donnees par le premier code, d'ou la veracite et la confirmation de l'explication.
