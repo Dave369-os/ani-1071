@@ -37,7 +37,7 @@ int main(){
     return 0;
 }
 ```
-Ce rectangle est identique a celui du chapitre precedent, 7 lignes, 20 colonnes et 18 espaces a l'interieur. Cependant, ce code-ci fait 18 lignes, il contient donc plus de lignes que celui du chapitre precedent(12 lignes) . Dans ce cas, le code du premier chapitre est le meilleur.
+Ce rectangle est identique a celui du chapitre precedent, 7 lignes, 20 colonnes et 18 espaces a l'interieur. Cependant, ce code-ci fait 18 lignes, il contient donc plus de lignes que celui du chapitre precedent(12 lignes).
 
 * Deuxieme cas: le rectangle a 12 lignes et 40 collonnes
 Apres compilation et execution on a:
@@ -81,4 +81,4 @@ int main(){
 }
 ```
 * Conclusion finale
-Ce code fait aussi 18 lignes, le meme resultat avec le code du premier chapitre aurait pris plus de ligne pour completer la hauteur du rectangle(5 lignes de code en plus exactement, pour quitter de 7 lignes a 12 avec des print). Au final le code avec les boucles imbriquees est le meilleur car une variation des mesures du dessin ne le change pas.
+Ce code fait aussi 18 lignes, le meme resultat avec le code du premier chapitre aurait pris plus de ligne pour completer la hauteur du rectangle(5 lignes de code en plus exactement, pour quitter de 7 lignes a 12 avec des print). Le code avec les boucles imbriquees est le meilleur car une variation des mesures du dessin ne le change pas alors que celui du premier chapitre pourrait etre assez long a elaborer quang le nombre de ligne devient important.
