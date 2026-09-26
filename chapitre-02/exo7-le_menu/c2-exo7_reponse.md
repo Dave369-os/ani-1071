@@ -64,3 +64,53 @@ int main(){
     return 0;
 }
 ```
+* Entrons en profondeur(suppression de tous les break):
+Si on supprime tous les break puis que l'on compile et aue l'on execute le programme, apres la selection d'une option, le programme affichera les choix a partir du nombre de la selection jusqu'au dernier. Passons a l'illustration en choisissant la premiere option.
+```
+$ clang++ main.cpp -o main
+
+user@DESKTOP-DNO62US MINGW64 /d/anime/z/ani-1071/ani-1071/chapitre-02/exo7-le_menu (main)
+$ ./main
+CHOISISSEZ UNE OPTION
+
+1- Nouvelle partie
+2-charger
+3-option
+4-quitter
+1
+Lancement d'une nouvelle partie...
+Chargement...
+Ouverture des options...
+Fermeture du programme...
+Choix invalide
+```
+Le code ayant servi est le meme memem avec les break en commentaire pour ne pas oublier leur emplacement.
+```
+#include <cstdio>
+
+int choix;
+int main(){
+    printf("CHOISISSEZ UNE OPTION\n\n");
+    printf("1- Nouvelle partie\n2-charger\n3-option\n4-quitter\n");
+    scanf("%d", &choix);
+    switch (choix){
+        case 1: 
+            printf("Lancement d'une nouvelle partie...\n");
+            //break;
+         case 2:
+            printf("Chargement...\n")   ;
+            //break;
+        case 3:
+            printf("Ouverture des options...\n");
+            //break;
+        case 4:
+            printf("Fermeture du programme...\n");
+            //break;
+        default:
+            printf("Choix invalide\n");
+            //break;
+    }
+    
+    return 0;
+}
+```
