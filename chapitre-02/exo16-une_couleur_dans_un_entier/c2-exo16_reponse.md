@@ -1,9 +1,9 @@
 # Rapport
 
-Ceci etait un exercice tres complexe, honnetement j'ai eu besoi de nombreuses explications et je ne sais pas si je serai capable de le refaire dans plusieurs mois sans le revoir. Le fichier source du code permettant d'extraire les 4 composantes d'une couleur puis de l'assombrir.
-Faudrait savoir qu'une couleur es representee par R-G-B-A designant les couleur primaires pour les trous premieres lettres et l'opacite pour la lettre A, chaque lettre etant representee sur 8 bits.La decomposer consiste a decaler la composante cible vers la droite grace a '<<' et eliminer le reste par une operation de 'et' logique puis l'utilisation du format %08X pour afficher chaque composante en decimale.
+Ceci etait un exercice tres complexe, honnetement j'ai eu besoin de nombreuses explications et je ne sais pas si je serai capable de le refaire dans plusieurs mois sans le revoir. Le fichier source du code permettant d'extraire les 4 composantes d'une couleur puis de l'assombrir.
+Faudrait savoir qu'une couleur es representee par R-G-B-A designant les couleur primaires pour les trous premieres lettres et l'opacite pour la lettre A, chaque lettre etant representee sur 8 bits.La decomposer consiste a decaler la composante cible vers la droite grace a '>>' et eliminer le reste par une operation de 'et' logique puis l'utilisation du format %u pour afficher chaque composante en decimale.
 la recomposer consiste a decaler toutes les composantes vers la gauche pour les assembler grace a l'operation de 'ou' logique, la verification est bien faite et affiche si la recomposition est egale a la couleur initiale ou nom.
-L'assombrir est un jeu d;enfant quand la premiere etape est comprise, i suffit de diviser chaque composante de l'etape 1 par 2 et de les composer comme a l'etape 2. Au final, l'etape 3 est dependante de la comprehension des deux premieres etapes.
+L'assombrir est un jeu d'enfant quand la premiere etape est comprise, il suffit de diviser chaque composante de l'etape 1 par 2 et de les composer comme a l'etape 2. Au final, l'etape 3 est dependante de la comprehension des deux premieres etapes.
 
 le code ayant servit ici est:
 ```
