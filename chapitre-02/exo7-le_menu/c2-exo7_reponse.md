@@ -115,6 +115,37 @@ int main(){
 }
 ```
 Dans le cas ou le break est supprime pour le case 2, seule l'entree de ce case change et nulle autre, les autre case s'executeront normalement sans anomalie ou erreurs dites semantiques, le cas ou tous les break sont retires toutes les entrees sont changees.
+ * Cas special: le cas "defautL:
 
-### Note pour l'encadrant
-Cher monsieur, la nomenclature n'est pa obligatoire pour le fichier source mais j'ai suivi votre conseil et j'ai renomme le fichier source qui est plus logique.
+ si l'utilisateur sasie '7', le resultat sera:
+ ```
+ $ ./main
+CHOISISSEZ UNE OPTION
+
+1- Nouvelle partie
+2-charger
+3-option
+4-quitter
+7
+Choix invalide
+```
+Ce qui affiche bien un resultat voulu par le programmeur, c'est un piege assez discret, il n'a pas de break et est la derniere option du code, le programme n'a donc plus de condition a executer. mettons l'option 'default' en premier choix, on a apres avoir selectionner 7:
+```
+$ clang++ c2-exo7_main.cpp -o main
+
+user@DESKTOP-DNO62US MINGW64 /d/anime/z/ani-1071/ani-1071/chapitre-02/exo7-le_menu (main)
+$ ./main
+CHOISISSEZ UNE OPTION
+
+1- Nouvelle partie
+2-charger
+3-option
+4-quitter
+7
+Choix invalide
+Lancement d'une nouvelle partie...
+Chargement...
+Ouverture des options...
+Fermeture du programme..
+```
+Le programme fait donc le processus explique plus haut lors de la suppression du break. Conclusion: aucun choix n'est epargne par le comportement du programme en quand de suppression de break.
