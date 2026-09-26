@@ -159,7 +159,7 @@ $ ./main
 89
 97
 ```
-Ici apparaissent des carres parfaits comme 4, 9, 26, 49... bien qu'ils ne soient pas premiers, ceci vient du fait que leurs racines carrees aient exclues du test alors qu'ils sont vues comme diviseurs de ces nombres. Pour un fonctionnement sans erreur semantique, un condition large doit alors etre mise au point.
+Ici apparaissent des carres parfaits comme 4, 9, 25, 49... bien qu'ils ne soient pas premiers, ceci vient du fait que leurs racines carrees aient exclues du test alors qu'ils sont vues comme diviseurs de ces nombres. Pour un fonctionnement sans erreur semantique, un condition large doit alors etre mise au point.
 
 * Code utilise pour ce test:
 ```
