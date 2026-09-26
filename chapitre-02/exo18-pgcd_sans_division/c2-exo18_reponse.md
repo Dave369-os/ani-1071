@@ -77,14 +77,14 @@ int main(){
 ```
 
 ## Methode de l'algorithme d'euclude
-Le code permettant de faire ce cas est dans le fichier "test.cpp" fourni avec le present rapport, ce code fait 27 lignes de code et s'execute sans erreur. Les tests ont ete effectue avec les memes couple que ceux du test passe.
+Le code permettant de faire ce cas est dans le fichier "c2-exo18_main2.cpp" fourni avec le present rapport, ce code fait 27 lignes de code et s'execute sans erreur. Les tests ont ete effectue avec les memes couple que ceux du test passe.
 
 * le couple (1071, 462)
 ```
-$ clang++ test.cpp -o test
+$ clang++ c2-exo18_main2.cpp -o main2
 
 user@DESKTOP-DNO62US MINGW64 /d/anime/z/ani-1071/ani-1071/chapitre-02/exo18-pgcd_sans_division (main)
-$ ./test
+$ ./main2
 Entrez le premier nombre
 1071
 Entrez le deuxieme nombre
@@ -94,10 +94,10 @@ il a fallu 3 tours pour le trouver
 ```
 * Le couple (1000000, 1)
 ```
-$ clang++ test.cpp -o test
+$ clang++ c2-exo18_main2.cpp -o main2
 
 user@DESKTOP-DNO62US MINGW64 /d/anime/z/ani-1071/ani-1071/chapitre-02/exo18-pgcd_sans_division (main)
-$ ./test
+$ ./main2
 Entrez le premier nombre
 1000000
 Entrez le deuxieme nombre
@@ -107,10 +107,10 @@ il a fallu 1 tours pour le trouver
 ```
 * Dernier cas: deux nombres similaires(100, 100)
 ```
-$ clang++ test.cpp -o test
+$ clang++ c2-exo18_main2.cpp -o main2
 
 user@DESKTOP-DNO62US MINGW64 /d/anime/z/ani-1071/ani-1071/chapitre-02/exo18-pgcd_sans_division (main)
-$ ./test
+$ ./main2
 Entrez le premier nombre
 100
 Entrez le deuxieme nombre
