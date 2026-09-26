@@ -19,10 +19,10 @@ Chargement...
 * Le resultat obtenu apres compilation, execution du programme en choisissant l'option '2' pour le programme avec suppression du break au case 2 donne:
 ```
 user@DESKTOP-DNO62US MINGW64 /d/anime/z/ani-1071/ani-1071/chapitre-02/exo7-le_menu (main)
-$ clang++ main.cpp -o main
+$ clang++ c2-exo7_main.cpp -o main
 
 user@DESKTOP-DNO62US MINGW64 /d/anime/z/ani-1071/ani-1071/chapitre-02/exo7-le_menu (main)
-$ ./main.exe
+$ ./main
 CHOISISSEZ UNE OPTION
 
 1- Nouvelle partie
@@ -67,7 +67,7 @@ int main(){
 * Entrons en profondeur(suppression de tous les break):
 Si on supprime tous les break puis que l'on compile et aue l'on execute le programme, apres la selection d'une option, le programme affichera les choix a partir du nombre de la selection jusqu'au dernier. Passons a l'illustration en choisissant la premiere option.
 ```
-$ clang++ main.cpp -o main
+$ clang++ c2-exo7_main.cpp -o main
 
 user@DESKTOP-DNO62US MINGW64 /d/anime/z/ani-1071/ani-1071/chapitre-02/exo7-le_menu (main)
 $ ./main
@@ -114,3 +114,7 @@ int main(){
     return 0;
 }
 ```
+Dans le cas ou le break est supprime pour le case 2, seule l'entree de ce case change et nulle autre, les autre case s'executeront normalement sans anomalie ou erreurs dites semantiques, le cas ou tous les break sont retires toutes les entrees sont changees.
+
+### Note pour l'encadrant
+Cher monsieur, la nomenclature n'est pa obligatoire pour le fichier source mais j'ai suivi votre conseil et j'ai renomme le fichier source qui est plus logique.
