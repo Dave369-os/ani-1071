@@ -65,4 +65,3 @@ entrez un entier superieur a 1
 ```
  Le resultat affiche est "0 etapes ont ete necessaires pour arriver a 1.", ce aui est bien vrai.
  Il serait contre intuitif de modifier le programme pour qu'il prevoit un singulier car a la base il est concu pour etre simple et demande un entier positif superieur a 1
- ```
