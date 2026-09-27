@@ -1,4 +1,5 @@
 #include <cstdio>
+#include<cmath>
 
 int main(){
 
@@ -12,7 +13,7 @@ int main(){
         tour += 1;
         i = x;
         x = (x + n/x)/2;
-        if((i - x) <= 0.000000001){
+        if(fabs(i - x) <= 0.000000001){
             break;
         }
         else

@@ -1,5 +1,5 @@
 # Rapport
-Le fichier source permettant de calculer la racine d'un nombre fourni par l'utilisateur grace a la methode de Heron est fourni avec le present rapport. Ce code fait 24 lignes et se compile et s'execute sans erreur, les types de variable utilisees sont: int pour compter le nombre de tour(s) et double pour les racines(etant donne que manipuler des 'int' ici serait trop risque a cause des arrondies comme le dit si bien le cours). Des tests ont ete effectues avec les nombres 2, 10000 et 1e12. Les resultats des test sont repportes dans les lignes suivantes:
+Le fichier source permettant de calculer la racine d'un nombre fourni par l'utilisateur grace a la methode de Heron est fourni avec le present rapport. Ce code fait 25 lignes et se compile et s'execute sans erreur, les types de variable utilisees sont: int pour compter le nombre de tour(s) et double pour les racines(etant donne que manipuler des 'int' ici serait trop risque a cause des arrondies comme le dit si bien le cours). Des tests ont ete effectues avec les nombres 2, 1000 et 1e12. Les resultats des test sont repportes dans les lignes suivantes:
 
 * Avec 2:
 ```
@@ -32,7 +32,7 @@ Entrez un nomre dont je donnerai la racine
 1e12
 la racine carree de 1000000000000.000000 est 1000000.000000 trouvee en 26 tour(s)
 ```
-Tous les resultats ont ete reverifies et sont corrects, le programme n'admet donc aucune erreur de semantique.
+
 Le code ayant permi d'obtenir ces resultat:
 ```
 #include <cstdio>
@@ -59,4 +59,15 @@ int main(){
 
     return 0;
 }
+```
+* Cas special: 0.25
+Dans ce cas, le resultat est:
+```
+$ clang++ c2-demo10_main.cpp -o main
+
+user@DESKTOP-DNO62US MINGW64 /d/anime/z/ani-1071/ani-1071/chapitre-02/demo10-la_racine_carree_a_la_main (main)
+$ ./main
+Entrez un nomre dont je donnerai la racine
+0.25
+la racine carree de 0.250000 est 0.500000 trouvee en 6 tour(s)
 ```
