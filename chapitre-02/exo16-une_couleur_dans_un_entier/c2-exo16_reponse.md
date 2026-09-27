@@ -28,7 +28,7 @@ int main(){
     unsigned c2 = (r << 24) | (g << 16) | (b << 8) | a;
     printf("La couleur recomposition est: %08X\n", c2);
     if(c == c2)
-        printf("La recomposition et la couleur initilale sont identiques.\n\n");
+        printf("La recomposition et la couleur initiale sont identiques.\n\n");
     else
         printf("Les deux couleurs ne sont identiques.\n\n");
 
@@ -55,8 +55,8 @@ B : 204
 A : 255
 
 La couleur recomposition est: 2A7FCCFF
-La recomposition et la couleur initilale sont identiques.
+La recomposition et la couleur initiale sont identiques.
 
 La couleur assombrie est 153F66FF : 356476671
 ```
-Apres execution, on voit que le programme affiche "La recomposition et la couleur initilale sont identiques." verifiant l'exactitude de la recomposition, notre code est donc exact.
+Apres execution, on voit que le programme affiche "La recomposition et la couleur initiale sont identiques." verifiant l'exactitude de la recomposition, notre code est donc exact.

@@ -4,7 +4,7 @@ int main(){
 
     unsigned int c = 0x2A7FCCFF;
     
-    //Extraction des quatre composantes et impresiion de ces derniers
+    //Extraction des quatre composantes et impression de ces derniers
     unsigned r = (c >> 24) & 0xFF;
     unsigned g = (c >> 16) & 0xFF;
     unsigned b = (c>> 8) & 0xFF;
@@ -19,7 +19,7 @@ int main(){
     unsigned c2 = (r << 24) | (g << 16) | (b << 8) | a;
     printf("La couleur recomposition est: %08X\n", c2);
     if(c == c2)
-        printf("La recomposition et la couleur initilale sont identiques.\n\n");
+        printf("La recomposition et la couleur initiale sont identiques.\n\n");
     else
         printf("Les deux couleurs ne sont identiques.\n\n");
 
