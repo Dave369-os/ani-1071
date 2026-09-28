@@ -13,7 +13,7 @@ int main(){
     printf("float : %zu octets\t", sizeof(float));
     printf("double : %zu octets\t", sizeof(double));
     printf("long double : %zu octets\t\t", sizeof(long double));
-    printf("void : %zu octets\n", sizeof(void));
+    //printf("void : %zu octets\n", sizeof(void));
 
     return 0;
 }
