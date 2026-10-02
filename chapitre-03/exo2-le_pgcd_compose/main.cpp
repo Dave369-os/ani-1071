@@ -1,7 +1,7 @@
 #include <cstdio>
 #include <cmath>
 
-long long pgcd(long long &a, long long &b){
+long long pgcd(long long a, long long b){
     a = llabs(a);
     b = llabs(b);
     if(a != b && a != 0 && b != 0){
@@ -21,7 +21,9 @@ long long pgcd(long long &a, long long &b){
 
 long long ppcm(long long a, long long b){
 
-    return (a / pgcd(a, b)) * b;
+    long long ppm = llabs((a / pgcd(a, b)) * b);
+
+    return ppm;
 }
 
 int main(){
