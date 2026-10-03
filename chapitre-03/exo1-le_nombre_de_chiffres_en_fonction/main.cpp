@@ -39,10 +39,19 @@ int nombreDeChiffres(int n);
     }
 
 int main(){
-    int n;
-        while(scanf("%d", &n) == 1){
-            printf("%d\n", nombreDeChiffres(n));
+    int a, n;
+    char line[100];
+    int pas = 0;
+    fgets(line, 100, stdin);
+
+    if(sscanf(line, "%d", &n) == 1){
+        while(sscanf(line + pas, "%d %n", &a, &n) == 1){
+            printf("%d\n", nombreDeChiffres(a));
+                pas = pas + n;
         }
+    }
+    else
+        printf("AUCUN");
 
     return 0;
 }
