@@ -17,8 +17,8 @@ int nombreDeChiffres(int n);
             long long x = n;
             x = x * -1;
             int chiffre = 0;
-            while(x > 1){
-                x = n /10;
+            while(x >= 1){
+                x = x /10;
                 chiffre = chiffre + 1;
             }
             return chiffre;
