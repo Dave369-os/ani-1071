@@ -1,0 +1,15 @@
+
+
+j'ai utiliser le fichier "aire.h" pour lier  les deux fichiers "main.cpp" et "aire.cpp" entre eux.
+A l'interieur de ce fichier, j'ai insere des include guards pour empecher son contenu d'etre inclu plusieurs fois.
+
+
+Dans mon cas, j'ai enleve la guarde et il n'y aucun changement, pourtant d'apres mes recherches je suis cense avoir une erreur car le contenu
+du fichier est inclus deux fois(par les deux autres fichiers presents)
+
+
+main.cpp compile sans voir le corps des fonctions parceque grace a l'instrcution "aire.h", le compilateur va aller dans cette endroit afin de
+d'avoir acces aux corps des fonctions.
+
+
+Il est quand meme a remarquer que le fichier "main.cpp" appelle la fonction tandis que "aire.cpp" la definit et "aire.h" la declare(annonce au compilateur que la fonction existe).
