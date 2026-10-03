@@ -13,7 +13,7 @@ void hanoi(int n, char depart, char arrivee, char intermediaire){
 int main(){
     int i;
     scanf("%d", &i);
-    hanoi(i, 'A', 'B', 'C');
+    hanoi(i, 'A', 'C', 'B');
     printf("%lld\n", compteur);
 
     return 0;
