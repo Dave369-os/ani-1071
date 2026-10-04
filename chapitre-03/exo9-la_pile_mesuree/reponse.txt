@@ -1,0 +1,13 @@
+- Mes six mesures :
+On constate qu'avec le tableau, la profondeur reste la profondeur est constante(512) mais assez faible par
+rapport au cas sans le tableau qui a des profondeurs qui different apres chaque executions mais avec
+des valeurs largement superieures a celles du cas avec le tableau.
+
+- Pourquoi le tableau change la profondeur :
+Le tableau change la profondeur car avec cette variables, la fonction devient plus lourde(elle reserve de l'espacepour un tableau a 100 collones)
+Elle garde plus d'espace dans la pile pour cette variable.
+
+- Ce que j'en retiens pour une fonction recursive serieuse :
+Une fonction recursiveest utile car nous evite de refaire la meme chose plusieurs fois. De plus
+la faire s'appeler un nombre infini de fois fait deborder la pile de stockage.A noter que la profondeur
+de la pile depend de la taille de la fonction.
