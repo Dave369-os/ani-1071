@@ -1,0 +1,18 @@
+
+__sans tableau__
+
+- essaie 1 : 43205
+
+- essaie 2 : 43188
+
+- essaie 3 : 43170
+
+
+__avec tableau__
+
+- essaie 1 : 512
+
+- essaie 2 : 512
+
+- essaie 3 : 512
+
