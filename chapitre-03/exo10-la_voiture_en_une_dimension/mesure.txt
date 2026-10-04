@@ -1,0 +1,61 @@
+Les resultat des tests sont portes dans les lignes suivantes:
+
+
+$ ./main
+0 0 2 0
+t : 0, vitesse : 0.0000 position : 0.0000
+
+
+$ ./main
+0 0 2 1
+t : 1, vitesse : 2.0000 position : 1.0000
+
+
+$ ./main
+0 0 2 2
+t : 2, vitesse : 4.0000 position : 4.0000
+
+
+$ ./main
+0 0 2 3
+t : 3, vitesse : 6.0000 position : 9.0000
+
+
+$ ./main
+0 0 2 4
+t : 4, vitesse : 8.0000 position : 16.0000
+
+
+$ ./main
+0 0 2 5
+t : 5, vitesse : 10.0000 position : 25.0000
+
+
+Le code utilise ici est:
+```
+#include <cstdio>
+
+double vitesse(double v0, double a, double t){
+    return a * t + v0;
+    }
+
+double position(double x0, double v0, double a, double t){
+    return 0.5 * a * t * t + v0 * t + x0;
+    }
+
+int main(){
+    char line[100];
+    double x0, v0, a, t;
+
+    fgets(line, 100, stdin);
+    if(sscanf(line, "%lf %lf %lf %lf", &x0, &v0, &a, &t) == 4){
+        printf("t : %.0lf, ", t);
+        printf("vitesse : %.4lf ", vitesse(v0, a, t));
+        printf("position : %.4lf\n", position(x0, v0, a, t));
+    }
+    else
+        printf("Entrez 4 nombres");
+
+    return 0;
+}
+```

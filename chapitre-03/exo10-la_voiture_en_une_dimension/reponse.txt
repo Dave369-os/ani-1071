@@ -1,0 +1,14 @@
+- Mes six relevés :
+Pour un depart arrete(v0 = 0 et x = 0 car on observe un immobilite dans ce cas), j'ai calcule la position  chaque seconde.
+elle croitau fure et a mesure que le temps croit.
+
+
+- Pourquoi position n'appelle pas vitesse :
+La fonction "position" n'appele pas "vitesse" car elle creerait une dependance inutile, 
+car l'utilisation de l'une n'implique pas forcement l'utilisation de l'autre.
+
+
+- Ce qu'une fonction pure me garantit :
+Une fonction pure me garantit la tranquilite car elle depend juste de ses parametre
+et n'a aucun effet sur les variables globales du code, ainsi, je sais qu'elle ne creera 
+jamais un changement d'etat de ces variables la(sauf si je les passe par reference, ce qui forcement sera mon choix).
