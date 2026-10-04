@@ -1,5 +1,5 @@
 
-__sans tableau__
+sans tableau
 
 - essaie 1 : 43205
 
@@ -8,7 +8,7 @@ __sans tableau__
 - essaie 3 : 43170
 
 
-__avec tableau__
+avec tableau 
 
 - essaie 1 : 512
 
