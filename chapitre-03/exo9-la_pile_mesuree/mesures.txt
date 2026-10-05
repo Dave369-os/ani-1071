@@ -1,18 +1,16 @@
+-
 
-sans tableau
+sans tableau, essai 1 : 43205
 
-- essaie 1 : 43205
+sans tableau, essai 2 : 43188
 
-- essaie 2 : 43188
+sans tableau, essai 3 : 43170
 
-- essaie 3 : 43170
+-
 
+avec tableau, essai 1 : 512
 
-avec tableau 
+avec tableau, essai 1 : 512
 
-- essaie 1 : 512
-
-- essaie 2 : 512
-
-- essaie 3 : 512
+avec tableau, essai 1 : 512
 
