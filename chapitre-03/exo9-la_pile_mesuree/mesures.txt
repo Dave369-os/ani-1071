@@ -1,4 +1,4 @@
--
+* sans tableau
 
 sans tableau, essai 1 : 43205
 
@@ -6,7 +6,7 @@ sans tableau, essai 2 : 43188
 
 sans tableau, essai 3 : 43170
 
--
+* avec tableau
 
 avec tableau, essai 1 : 512
 
