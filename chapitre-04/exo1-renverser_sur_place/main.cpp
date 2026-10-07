@@ -33,7 +33,7 @@ void renverser(int t[], int &n){
     }
 
     for(int i = 0; i < n; i++){
-        printf("%d ", t[i]);
+        printf("%d\n", t[i]);
     }
 
 }
