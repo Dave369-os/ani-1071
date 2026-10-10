@@ -31,13 +31,13 @@ long long trierParBulles(int t[], int n){
 
     long long compteur = 0;
 
-    for(int i = 0; i < n; i++){
+    for(int i = 0; i < n - 1; i++){
         if(t[i] > t[i + 1]){
             int temoin = t[i];
             t[i] = t[i + 1];
             t[i + 1] = temoin;
             compteur++;
-            i = 0;
+            i = -1;
             
         }
         else
