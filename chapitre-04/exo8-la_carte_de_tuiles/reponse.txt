@@ -1,0 +1,8 @@
+Le calcul de mon indice :
+Pour calculer l'indice de la tables a une dimension quittant de la case (x, y), on utilise la formule d'applatissement donnee dans le cours: 'indice = y * largeur + x"
+
+Pourquoi un seul tableau et pas un tableau de tableaux :
+un tableau occupe un espace en memoire, un tableau de plusieurs tableaux c'est plusiuers espaces en memoire pour gerer tout ces tableau, ici, la vitesse et la simpilivite ont etet preferees
+
+Ce qui se passe si je confonds largeur et hauteur :
+Si dans la formule 'indice = y * largeur + x' je remplace 'largeur' par 'hauteur', la boucle sautera le mauvais nombre d'indices, il sera lu en diagonale et on sortira du tableau sans erreur de compilation, el aura ete deborde.
