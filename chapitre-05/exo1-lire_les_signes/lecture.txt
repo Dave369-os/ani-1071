@@ -1,0 +1,18 @@
+Prédictions :
+j'ecris dans ce fichier sans meme avoir compile, mes preictions sont:
+5 9
+9 9
+9 1
+
+Obtenu :
+$ ./main
+5 9
+9 9
+9 1
+
+Écarts :
+aucun
+
+p = q :
+Cette instruction attribut a p l'adresse de la variable pointee par p. ainsi, les deux variables pointent sur "b".
+Ainsi, cette instruction change l'adresse contenue dans le pointeur p et ne change pas la valeur de "a" qui reste a "9".
