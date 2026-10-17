@@ -1,0 +1,26 @@
+Sortie :
+x = 1, y = 2
+
+$ ./main
+x = 2, y = 1
+
+$ ./main
+x = 2, y = 1
+
+$ ./main
+AVANT: 1.00 2.00
+APRES: 2.00 1.00
+
+$ ./main
+AVANT: A B
+APRES: B A
+
+À l'appel :
+echanger(*a, *b);
+Il apprend au lecteur de main que la fonction agira directement sur les adresses des parametre passe et par concequant, cette fonction ne fera pas de copie des parametres passees mais les modifira dirctement.
+echanger(x, y);
+Il apprend au lecteur de main que la fonction "echanger" creera des copie des parametres passes en son sein alors que celle-ci les modifira directement.
+
+Ce qui change :
+Ce qui change ici est le type des variables passees aux differentes fonctions(int, char, double), et ce qui ne change pas est la logique de passage:
+passer le contenu de la premiere variable a une variavle temoin, passer celle de la deuxieme a la premiere enfin, passer le contenu de la variable temoin a celle de la deuxieme variable.
