@@ -1,0 +1,31 @@
+deplier :
+- i = 0, 
+$ ./main
+x : 0, y : 0
+
+- i  = 39
+$ ./main
+x : 39, y : 0
+
+- i = 55
+$ ./main
+x : 15, y : 1
+
+minMax :
+$ ./main
+min : 3, max : 19
+
+diviser :
+- a = 20, b = 2
+$ ./main
+verification : 0, quotient : 1, reste : 1
+
+- a = 30, b = 11
+$ ./main
+verification : 1, quotient : 2, reste : 8
+
+Par zéro :
+- a = 30, b = 0
+$ ./main
+APRES : quotient = 1, reste = 1
+APRES : quotient = 1, reste = 1, valeur retounee = 0
