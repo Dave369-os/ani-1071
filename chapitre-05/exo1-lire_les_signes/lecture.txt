@@ -1,5 +1,4 @@
 Prédictions :
-j'ecris dans ce fichier sans meme avoir compile, mes preictions sont:
 5 9
 9 9
 9 1
