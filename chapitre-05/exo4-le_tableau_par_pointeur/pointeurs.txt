@@ -1,0 +1,27 @@
+Sortie :
+
+$ clang++ parpointeur.cpp -o main
+
+user@DESKTOP-DNO62US MINGW64 /d/anime/z/ani-1071/ani-1071/chapitre-05/exo4-le_tableau_par_pointeur (main)
+$ ./main
+La somme est : 56
+
+le maximum est : 19
+
+5       4       3       2       1
+
+longueur touvee par la fonction : 8
+longueur trouvee par <cstring> : 8
+
+
+Yaoundé :
+La longueur renvoyee 'longueur' par Yaounde est "8", elle n'est pas egale au nombre de lettres car la fonction ne compte pas le nombre de lettres mais le nombre d'octets. Les caracte 'y', 'a', 'o', 'u', 'n', 'd' font 1 octet chacun en memoire, main 'é' en fait 2, raison pour laquelle on obtient 8.
+
+Pourquoi pas const :
+la fonction 'inverser' ne peut pas prendre de constante car elle travaille directement sur la variable principale(le tableau), la passer en sonstante empechera donc toute modification dans cette fonction et partour ailleurs et levera meme une erreur lors de la compilation.
+
+
+
+- "longueur" avec la chaine bonjour donne:
+longueur touvee par la fonction : 7
+longueur trouvee par <cstring> : 7
