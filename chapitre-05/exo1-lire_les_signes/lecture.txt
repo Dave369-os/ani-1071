@@ -4,7 +4,6 @@ Prédictions :
 9 1
 
 Obtenu :
-$ ./main
 5 9
 9 9
 9 1
