@@ -1,0 +1,26 @@
+Intégrale :
+$ clang++ integrale.cpp -o main
+
+user@DESKTOP-DNO62US MINGW64 /d/anime/z/ani-1071/ani-1071/chapitre-05/exo6-l_integrale_proprement (main)
+$ ./main
+1.542045
+
+Dérivée :
+$ clang++ integrale.cpp -o main
+
+user@DESKTOP-DNO62US MINGW64 /d/anime/z/ani-1071/ani-1071/chapitre-05/exo6-l_integrale_proprement (main)
+$ ./main
+1.000000
+ 
+Zéro :
+$ clang++ integrale.cpp -o main
+
+user@DESKTOP-DNO62US MINGW64 /d/anime/z/ani-1071/ani-1071/chapitre-05/exo6-l_integrale_proprement (main)
+$ ./main
+1.414214
+ 
+Arrêt :
+La regle d'arret est b - a < 1e-9
+
+Sans pointeur :
+Sans pointeur, il faudrait modifier le code de integrale, derivee et zero; ajouter un switch et recompiler toutes les fonctions. Avec pointeur, on ne modifie ni integrale, derivee ou zero, on ajoute seulement la nouvelle fonction.
