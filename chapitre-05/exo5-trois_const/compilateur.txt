@@ -1,0 +1,46 @@
+a : 
+*a = 5;
+$ clang++ troisconst.cpp -o main
+troisconst.cpp:11:8: error: read-only variable is not assignable
+   11 |     *a = 5;
+      |     ~~ ^
+1 error generated.
+
+a = &y;
+acceptee
+
+b : 
+*b = 5;
+acceptee
+
+b = &y;
+$ clang++ troisconst.cpp -o main
+troisconst.cpp:15:7: error: cannot assign to variable 'b' with const-qualified type 'int *const'
+   15 |     b = &y;
+      |     ~ ^
+troisconst.cpp:8:16: note: variable 'b' declared const here
+    8 |     int* const b = &x;
+      |     ~~~~~~~~~~~^~~~~~
+1 error generated.
+
+c : 
+*c = 5;
+$ clang++ troisconst.cpp -o main
+troisconst.cpp:17:8: error: read-only variable is not assignable
+   17 |     *c = 5;
+      |     ~~ ^
+1 error generated.
+
+c = &y;
+$ clang++ troisconst.cpp -o main
+troisconst.cpp:18:7: error: cannot assign to variable 'c' with const-qualified type 'const int *const'
+   18 |     c = &y;
+      |     ~ ^
+troisconst.cpp:9:22: note: variable 'c' declared const here
+    9 |     const int* const c = &x;
+      |     ~~~~~~~~~~~~~~~~~^~~~~~
+1 error generated.
+
+Règle : 
+Si "const" est gauche de l'etoile, c'est la valeur pointee qui est constante, si elle est droite, c'est le poineur qui est constant(on ne pourra donc pas changer son adresse)
+si "const" est des deux cote de l'etoile, les deux variables(pointee et pointeur) sont protegees.
