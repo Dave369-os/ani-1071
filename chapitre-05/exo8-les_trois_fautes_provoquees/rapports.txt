@@ -1,0 +1,69 @@
+Fuite :
+sans outil :
+
+
+avec outil :
+$ clang++ -fsanitize=address fuite.cpp -o main
+C:/msys64/ucrt64/bin/ld: cannot find C:/msys64/ucrt64/lib/clang/22/lib/x86_64-w64-windows-gnu/libclang_rt.asan_dynamic.dll.a: No such file or directory
+C:/msys64/ucrt64/bin/ld: cannot find C:/msys64/ucrt64/lib/clang/22/lib/x86_64-w64-windows-gnu/libclang_rt.asan_dynamic.dll.a: No such file or directory
+C:/msys64/ucrt64/bin/ld: cannot find C:/msys64/ucrt64/lib/clang/22/lib/x86_64-w64-windows-gnu/libclang_rt.asan_dynamic_runtime_thunk.a: No such file or directory
+C:/msys64/ucrt64/bin/ld: cannot find C:/msys64/ucrt64/lib/clang/22/lib/x86_64-w64-windows-gnu/libclang_rt.asan_dynamic_runtime_thunk.a: No such file or directory
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Pendant :
+sans outil :
+
+avec outil :
+$ clang++ -fsanitize=address pendant.cpp -o main
+C:/msys64/ucrt64/bin/ld: cannot find C:/msys64/ucrt64/lib/clang/22/lib/x86_64-w64-windows-gnu/libclang_rt.asan_dynamic.dll.a: No such file or directory
+C:/msys64/ucrt64/bin/ld: cannot find C:/msys64/ucrt64/lib/clang/22/lib/x86_64-w64-windows-gnu/libclang_rt.asan_dynamic.dll.a: No such file or directory
+C:/msys64/ucrt64/bin/ld: cannot find C:/msys64/ucrt64/lib/clang/22/lib/x86_64-w64-windows-gnu/libclang_rt.asan_dynamic_runtime_thunk.a: No such file or directory
+C:/msys64/ucrt64/bin/ld: cannot find C:/msys64/ucrt64/lib/clang/22/lib/x86_64-w64-windows-gnu/libclang_rt.asan_dynamic_runtime_thunk.a: No such file or directory
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Double :
+sans outil :
+double.cpp:6:5: warning: 'delete[]' applied to a pointer that was allocated with 'new'; did you mean 'delete'?
+      [-Wmismatched-new-delete]
+    6 |     delete [] t;
+      |     ^      ~~
+double.cpp:5:14: note: allocated with 'new' here
+    5 |     int *t = new int;
+      |              ^
+double.cpp:7:5: warning: 'delete[]' applied to a pointer that was allocated with 'new'; did you mean 'delete'?
+      [-Wmismatched-new-delete]
+    7 |     delete [] t;
+      |     ^      ~~
+double.cpp:5:14: note: allocated with 'new' here
+    5 |     int *t = new int;
+      |              ^
+2 warnings generated.
+
+avec outil :
+$ clang++ -fsanitize=address double.cpp -o main
+double.cpp:6:5: warning: 'delete[]' applied to a pointer that was allocated with 'new'; did you mean 'delete'?
+      [-Wmismatched-new-delete]
+    6 |     delete [] t;
+      |     ^      ~~
+double.cpp:5:14: note: allocated with 'new' here
+    5 |     int *t = new int;
+      |              ^
+double.cpp:7:5: warning: 'delete[]' applied to a pointer that was allocated with 'new'; did you mean 'delete'?
+      [-Wmismatched-new-delete]
+    7 |     delete [] t;
+      |     ^      ~~
+double.cpp:5:14: note: allocated with 'new' here
+    5 |     int *t = new int;
+      |              ^
+2 warnings generated.
+C:/msys64/ucrt64/bin/ld: cannot find C:/msys64/ucrt64/lib/clang/22/lib/x86_64-w64-windows-gnu/libclang_rt.asan_dynamic.dll.a: No such file or directory
+C:/msys64/ucrt64/bin/ld: cannot find C:/msys64/ucrt64/lib/clang/22/lib/x86_64-w64-windows-gnu/libclang_rt.asan_dynamic.dll.a: No such file or directory
+C:/msys64/ucrt64/bin/ld: cannot find C:/msys64/ucrt64/lib/clang/22/lib/x86_64-w64-windows-gnu/libclang_rt.asan_dynamic_runtime_thunk.a: No such file or directory
+C:/msys64/ucrt64/bin/ld: cannot find C:/msys64/ucrt64/lib/clang/22/lib/x86_64-w64-windows-gnu/libclang_rt.asan_dynamic_runtime_thunk.a: No such file or directory
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+La pire :
+La faute qui me parait la plus grave est la faute du fichier "pendant.cpp" car il compile sans probleme et ne renvoie aucune erreur sans outil, en arriere plan il corrompe la memoire sans que l'utilisateur ne s'en rend compte. Elle peut cracher a tout moment et l'utilisateur ne saura pas imediatement la cause.
