@@ -1,0 +1,18 @@
+Aléatoire :
+$ ./main
+100 Tri Rapide : 670 Tri par selection : 4950
+1000 Tri Rapide : 9972 Tri par selection : 499500
+10000 Tri Rapide : 153263 Tri par selection : 49995000
+100000 Tri Rapide : 2020991 Tri par selection : 4999950000
+
+Déjà trié(10000) :
+$ ./main
+49995000
+
+Pourquoi :
+ quand le tableau est déjà trié, pivot = max, donc partage = n - 1 a gauche,0 a droite.
+
+Mon pivot :
+J'ai choisi le pivot au milieu. Maintenant ca fait:
+$ ./main
+51822
