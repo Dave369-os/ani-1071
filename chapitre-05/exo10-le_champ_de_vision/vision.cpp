@@ -21,7 +21,7 @@ int main(){
     printf("%d\n", voit(garde, direction, derriere));
 
     //bord
-    double angle_dedans = 29 * M_PI / 180, angle_dehors = 31 * M_PI / 180;
+    double angle_dedans = (29 * 3,14159) / 180, angle_dehors = (31 * 3,14159) / 180;
 
     double dedans[2] = {5 * cos(angle_dedans), 5 * sin(angle_dedans)};
     double dehors[2] = {5 * cos(angle_dehors), 5 * sin(angle_dehors)};
@@ -63,7 +63,7 @@ bool voit(const double* garde, const double* direction, const double* joueur){
     normaliser(v, 2);
     double produit_scalaire = scalaire(v, direction, 2);
 
-    double cosinus = cos((30 * M_PI / 180));
+    double cosinus = cos((30 * 3,14159 / 180));
 
     return produit_scalaire > cosinus;
 }
