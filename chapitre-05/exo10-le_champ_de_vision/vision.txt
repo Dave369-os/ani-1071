@@ -1,0 +1,16 @@
+Devant : 
+1
+
+Côté :
+1
+
+Derrière :
+0
+
+Bord :
+
+dedans : 1
+dehors : 0
+
+Pourquoi 30 :
+On compare au cosinus de 30 degre car la comparaison se fais du milieu du champ de vision a la limite(gayche ou droite) dont l'angle maximal est 30 degre.
