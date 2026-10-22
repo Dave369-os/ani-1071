@@ -1,0 +1,42 @@
+-O0 :
+$ ./main
+Total : 500000500000
+Duree : 0.005581
+
+$ ./main
+Total : 500000500000
+Duree : 0.003903
+
+$ ./main
+Total : 500000500000
+Duree : 0.003801
+
+-O2 :
+$ ./main
+Total : 500000500000
+Duree : 0.006053
+
+$ ./main
+Total : 500000500000
+Duree : 0.004109
+
+$ ./main
+Total : 500000500000
+Duree : 0.003801
+
+Un printf :
+Duree : 0.000014
+
+Duree : 0.000013
+
+Duree : 0.000013
+
+Duree : 0.000014
+
+Duree : 0.000014
+
+Mon programme ecrivait dans un fichier texte(grace a la commande "$ ./main >> mesure.txt". le ">>" pour ne pas ecraser les valeurs deja presentes dans le fichier)
+
+Le plus cher :
+Ce qui coute le plus chere selon mes mesures est le "printf", car un printf prend plus de temps qu'une iteration de boucle.
+L'optimisation semble ne pas avoir agit sur la boucle afin de reduire le temps d'execution du programme.
