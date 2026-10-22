@@ -1,0 +1,38 @@
+Les quatre :
+$ ./main
+5
+0
+{3.2679489653813835e-07, 0.9999999999999466}
+{1, 1}
+
+Mes essais :
+printf("{%.17g, %.17g}", add({1, 0}, {0, 1}).x, add({1, 0}, {0, 1}).y);
+$ ./main
+{1, 1}
+
+printf("{%.17g, %.17g}", sub({1, 0}, {0, 1}).x, sub({1, 0}, {0, 1}).y);
+$ ./main
+{1, -1}
+
+printf("{%.17g, %.17g}", scale({1, 0}, 5.0).x, scale({1, 0}, 5.0).y);
+$ ./main
+{5, 0}
+
+printf("{%.17g, %.17g}", normalize({1, 0}).x, normalize({1, 0}).y);
+$ ./main
+{1, 0}
+
+printf("{%.17g, %.17g}", lerp({1, 0}, {0, 1}, 5.0).x, lerp({1, 0}, {0, 1}, 5.0).y);
+$ ./main
+{6, -5}
+
+printf("{%.17g, %.17g}", perp({1, 0}).x, perp({1, 0}).y);
+$ ./main
+{-0, 1}
+
+Epsilon :
+printf("{%.11f, %.11f}\n", rotate({1, 0}, radians(90)).x, rotate({1, 0}, radians(90)).y);
+$ ./main
+{0.00000032679, 1.00000000000}
+
+Epsilon est choisi est choisi pour avoir un ecart moins important. Ceci a cause de la troncature de PI qui n'est pas ecrit dans son entierete(3.141592), ce qui fausse la valeur exacte de "cos(angle)".
