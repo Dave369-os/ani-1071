@@ -1,0 +1,36 @@
+Prévu :
+void bougerCopie(Vec2 p)          -> p.x : 1, p.y : 0
+
+void bougerRef(Vec2& p)           -> p.x : 2, p.y : 0
+
+double longueurRef(const Vec2& p) -> p.x : 2, p.y : 0
+
+Obtenu :
+$ ./main
+x : 1.00
+y : 0.00
+
+x : 2.00
+y : 0.00
+
+x : 2.00
+y : 0.00
+
+(l'ordre est le meme que celui de a premiere etiquette. Ceci est un copie colle direct du compilateur)
+
+Message :
+$ clang++ -Wall -Wextra copie.cpp -o main
+copie.cpp:40:9: error: cannot assign to variable 'p' with const-qualified type 'const Vec2 &'
+   40 |     p.x = 0;
+      |     ~~~ ^
+copie.cpp:39:32: note: variable 'p' declared const here
+   39 | double longueurRef(const Vec2& p){
+      |                    ~~~~~~~~~~~~^
+1 error generated.
+
+Pourquoi :
+(Vec2 p)        -> La fonction travaille sur une copie du parametre qui sera rendu a la fin de l'execution de celle-ci.
+
+(Vec2 &p)       -> La fonction agit sur le paramettre original et peut ainsi le modifier, ces modification seront obsevees aussi bien dans l'espace local que dans l'espace globale.
+
+(const Vec2 &p) -> La fonction travaille sur l'original mais le compilateur interdit toute modification de cette variable. Cette methode garantit l'integrite de la variable tout en evitant le cout d'une copie pour une fontion qui ne fait que lire.
