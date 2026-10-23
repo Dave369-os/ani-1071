@@ -1,0 +1,18 @@
+v0 :
+7.672027
+
+1/120 :
+$ ./main
+2.970557
+
+1/30 :
+$ ./main
+2.873487
+
+Mon pas :
+Le pas choisi est de 1/200 seconde et le resultat est:
+$ ./main
+2.980850
+
+L'écart vient :
+L'ecart vient de la simulation plus precisement au niveau du pas, plus le pas est petit, plus l'ecart petit. La preuve est donnee par les mesures : plus le pas est petit, plus on se rapproche de 3 metres.
