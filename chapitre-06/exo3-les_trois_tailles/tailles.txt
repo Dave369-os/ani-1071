@@ -1,0 +1,27 @@
+Mesures :
+
+Structure       prevision          resultat
+
+Vec2,           16 octets,         16 octets
+
+Particule,      40 octets,         40 octets
+
+A,              5 octets,          8 octets
+
+B,              10 octets,         24 octets
+
+C,              10 octets,         16 octets
+
+ParticuleEta,   41 octets,        48 octets
+
+
+Ordres essayés :
+vie, etat, position, vitesse -> 48 octets
+
+vitesse, vie, etat, position -> 48 octets
+
+vie, vitesse, etat, position -> 48 octets
+
+
+Règle :
+Le compilateur  aligne chaque membre sur un multiple de sa taille. La taile totale de sa Structure est egale a un multiple de l'alignement du plus gros membre.
