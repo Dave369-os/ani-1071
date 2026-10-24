@@ -1,0 +1,17 @@
+Attendu :
+le nombre d'appels attendu est :
+10 / (1 / 120) = 1200 appels
+
+Attentes courtes (rand() % 1000):
+Duree maximale  -> 0.000003
+nombre de tours -> 4896479
+nombre d'appels -> 1199
+
+Attentes longues(rand() % 20000 + 15000) :
+Duree maximale  -> 0.000114
+nombre de tours -> 116614
+nombre d'appels -> 1199
+
+Pourquoi  :
+Le nombre d'appels ne suit pas le nombre de tours car les appels sont pilotes par l'accumulateur de temps reel, pas par la boucle d'affichage. C'est-a-dire que "mettreAJour" n'est pas appele a chaque tour de la grande boucle.
+ l'écart restant  dans le calcul vient de  du reste dans l'accumulateur(a la fin des 10 secondes, il rest des secondes dans l'accumulateur).
