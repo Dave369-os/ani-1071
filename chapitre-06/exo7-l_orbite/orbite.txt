@@ -1,0 +1,48 @@
+Pas choisi :
+dt = 0.2, duree d'un tour = 2 * pi * 100 / v = 2 * pi * 100 / 1 = 628.31 secondes
+
+Distances :
+Pas : 0; Distance : 100.000198(explicite), 99.999802(implicite)
+Pas : 500; Distance : 100.147545(explicite), 99.915840(implicite)
+Pas : 1000; Distance : 100.525337(explicite), 99.909653(implicite)
+Pas : 1500; Distance : 101.149200(explicite), 99.987129(implicite)
+Pas : 2000; Distance : 101.810493(explicite), 100.076912(implicite)
+Pas : 2500; Distance : 102.269165(explicite), 100.096474(implicite)
+Pas : 3000; Distance : 102.462761(explicite), 100.027946(implicite)
+Pas : 3500; Distance : 102.554604(explicite), 99.934303(implicite)
+Pas : 4000; Distance : 102.792473(explicite), 99.901718(implicite)
+Pas : 4500; Distance : 103.296272(explicite), 99.960297(implicite)
+Pas : 5000; Distance : 103.956230(explicite), 100.056122(implicite)
+Pas : 5500; Distance : 104.532570(explicite), 100.101166(implicite)
+Pas : 6000; Distance : 104.856552(explicite), 100.054207(implicite)
+Pas : 6500; Distance : 104.963074(explicite), 99.958405(implicite)
+Pas : 7000; Distance : 105.059425(explicite), 99.901741(implicite)
+Pas : 7500; Distance : 105.359085(explicite), 99.936676(implicite)
+Pas : 8000; Distance : 105.909843(explicite), 100.031029(implicite)
+Pas : 8500; Distance : 106.558105(explicite), 100.098015(implicite)
+Pas : 9000; Distance : 107.075348(explicite), 100.076317(implicite)
+Pas : 9500; Distance : 107.336166(explicite), 99.985764(implicite)
+
+Pas dix fois plus petit :
+$ ./main
+Pas : 0; Distance : 100.000000(explicite), 99.999992(implicite)
+Pas : 500; Distance : 100.001007(explicite), 99.999016(implicite)
+
+Dessin :
+
+                EEEEEEEE                
+            EEEEESSSSSSEEEEE            
+           EES            SEE           
+          EE                EE          
+         EE                  EE         
+         ES                  SE         
+         ES                  SE         
+         EE                  SE         
+          EES              SSS          
+           EEES          SSSE           
+             EEEESSSSSSESSE             
+                EEEEEEEE 
+
+Laquelle tient :
+La methode semi-implicite garde son orbite, distance reste proche de 100, la methode explicite, elle, spirale ver l'exterieur et la distance augmente a chaque tour.
+celle qui tient est donc la methode semi-implicite.
