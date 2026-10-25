@@ -1,0 +1,29 @@
+Sortie : 
+$ ./main
+Vivants debut : 0
+apres creation : [1 -> 2 -> 3 -> 4 -> 5 -> 6]
+compter = 6 contient 4 = 1 contient 99 = 0
+retirer tete 1 : [2 -> 3 -> 4 -> 5 -> 6]
+retirer milieu 4 : [2 -> 3 -> 4 -> 5 -> 6]
+retirer absent 99 : [2 -> 3 -> 4 -> 5 -> 6]
+inverser : [6 -> 5 -> 4 -> 3 -> 2]
+vivants avant liberer : 5
+Vivants apres liberer : 0
+
+Vivants : 
+vivants avant liberer : 5
+Vivants apres liberer : 0
+
+Par valeur :
+ $ clang++ -fsanitize=address liste.cpp -o main
+liste.cpp:6:11: error: field has incomplete type 'Noeud'
+    6 |     Noeud suivant;     // le suivant, ou nullptr
+      |           ^
+liste.cpp:3:8: note: definition of 'Noeud' is not complete until the closing '}'
+    3 | struct Noeud
+      |        ^
+1 error generated.
+
+puis Pourquoi :
+Si Noeud contient Noeud suivant par valeur, le compilateur doit connaitre la taille de noeud pour calculer la taille de noeud, qui contient Noeud.
+Le compilateur accepte Noeud* car sa nature de pointeur permet de l'executer sans connaitre la taille a l'avance.
