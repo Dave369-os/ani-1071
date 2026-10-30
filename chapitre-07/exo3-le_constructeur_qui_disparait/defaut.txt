@@ -1,0 +1,61 @@
+Messages : 
+$ clang++ defaut.cpp -o main
+defaut.cpp:6:7: error: no matching constructor for initialization of 'P'
+    6 |     P x;
+      |       ^
+defaut.cpp:3:19: note: candidate constructor not viable: requires single argument 'v', but no arguments were provided
+    3 | struct P { int a; P(int v) : a(v) {} };
+      |                   ^ ~~~~~
+defaut.cpp:3:8: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 0 were
+      provided
+    3 | struct P { int a; P(int v) : a(v) {} };
+      |        ^
+defaut.cpp:3:8: note: candidate constructor (the implicit move constructor) not viable: requires 1 argument, but 0 were
+      provided
+    3 | struct P { int a; P(int v) : a(v) {} };
+      |        ^
+defaut.cpp:7:7: error: no matching constructor for initialization of 'P[10]'
+    7 |     P t[10];
+      |       ^
+defaut.cpp:3:19: note: candidate constructor not viable: requires single argument 'v', but no arguments were provided
+    3 | struct P { int a; P(int v) : a(v) {} };
+      |                   ^ ~~~~~
+defaut.cpp:3:8: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 0 were
+      provided
+    3 | struct P { int a; P(int v) : a(v) {} };
+      |        ^
+defaut.cpp:3:8: note: candidate constructor (the implicit move constructor) not viable: requires 1 argument, but 0 were
+      provided
+    3 | struct P { int a; P(int v) : a(v) {} };
+      |        ^
+2 errors generated.
+
+Avec a(0) : 
+$ ./main
+x.a = 0
+
+Avec = default :
+$ clang++ -Wall -Wextra defaut.cpp -o main
+defaut.cpp:12:7: warning: unused variable 't' [-Wunused-variable]
+   12 |     P t[10];
+      |       ^
+1 warning generated.
+
+- x.a : 
+$ ./main
+x.a = 1
+x.a = 1
+x.a = 1
+x.a = 1
+x.a = 1
+x.a = 1
+x.a = 1
+x.a = 1
+x.a = 1
+x.a = 1
+
+
+pourquoi : 
+* Les deux declaerations ont ete refusees car le constructeur par defaut a ete ecrase par le constructeur initialise dans la structure. ce constructeur ne prenant pas en compte le cas ou l'objet est declare avec aucun parametre par defaut, le compilateur renvoit une erreur.
+* avec "default" x.a renvoit ce qui reste en memoire de facon aleatoire. ces valeurs sont aleatoires.
+Dans mon cas, un valeur a ete repetitive. Meme avec 100 affichage.
