@@ -1,0 +1,39 @@
+Boucle : 
+$ ./main
+total = 4999999950000000
+0.349912
+
+user@DESKTOP-DNO62US MINGW64 /d/anime/z/ani-1071/ani-1071/chapitre-07/exo2-le_chronometre_objet (main)
+$ ./main
+total = 4999999950000000
+0.348372
+
+user@DESKTOP-DNO62US MINGW64 /d/anime/z/ani-1071/ani-1071/chapitre-07/exo2-le_chronometre_objet (main)
+$ ./main
+total = 4999999950000000
+0.343435
+
+Le plus court : 
+$ ./main
+0.0000002000
+0.0000002000
+0.0000002000
+0.0000001000
+0.0000003000
+
+ces ecarts montrent que la precision de chrono est de l'ordre de la nanoseconde.
+
+Message : 
+clang++ chrono.cpp -o main
+chrono.cpp:25:1: error: 'this' argument to member function 'redemarrer' has type 'const Chrono', but function is not
+      marked const
+   25 | k.redemarrer();
+      | ^
+chrono.cpp:16:14: note: 'redemarrer' declared here
+   16 |         void redemarrer(){t = maintenant();}
+      |              ^
+1 error generated.
+
+pourquoi : 
+l'un des appel passe et l'autre non a cause d'une promesse faite a l'aide de 'const'. il a ete garanti que l'objet n'aurai aucun changement grace a ce mot, ce qui n'a pas etet le cas avec la methode 'demarrer'.
+elle modifie directement la composante de 't' de la classe, d'ou l'erreur recue. Ce que ne fait pas la methode "ecoule".
