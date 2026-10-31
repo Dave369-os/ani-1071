@@ -1,0 +1,42 @@
+Messages :
+$ clang++ pile.cpp -o main
+pile.cpp:22:7: error: 'nombre' is a private member of 'Pile'
+   22 |     p.nombre = -5;
+      |       ^
+pile.cpp:6:10: note: declared private here
+    6 |     int  nombre;
+      |          ^
+1 error generated
+
+$ clang++ pile.cpp -o main
+pile.cpp:52:7: error: 'tete' is a private member of 'File'
+   52 |     f.tete = 7;
+      |       ^
+pile.cpp:24:13: note: declared private here
+   24 |         int tete;              // d'où l'on sort
+      |             ^
+1 error generated.
+
+Essais : 
+$ ./main
+**PILE**
+Apres 150 empiler : taille = 100
+Apres 200 depiler : taille = 0
+
+**FILES**
+Apres 150 enfiler : taille = 100
+Apres 50 defiler : taille = 50
+Apres 60 re-enfiler : taille = 100
+
+Invariant de la file :
+tete dans[0, 99]
+queue dans [0, 99]
+nombre dans [0, 99]
+queue peut etre < tete car circulaire
+nombre == 0 -> file vide, defiler rend -1
+nombre = 100 -> file pleine, enfiler fait rien
+
+Struct : 
+Le compilateur accepte
+p.nombre = -5; et f.tete = 7; en public.
+*conclusion : Struct et class sont pareils sauf la visibilite par defaut(public pour struct et privaite pour class).
