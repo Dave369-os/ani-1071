@@ -1,0 +1,44 @@
+Vivantes : 
+$ ./main
+Avant la boucle, images vivantes = 0
+
+tour 1, images vivantes = 1
+tour 2, images vivantes = 1
+tour 3, images vivantes = 1
+tour 4, images vivantes = 1
+tour 5, images vivantes = 1
+tour 6, images vivantes = 1
+tour 7, images vivantes = 1
+tour 8, images vivantes = 1
+tour 9, images vivantes = 1
+tour 10, images vivantes = 1
+
+Apres la boucle, images vivantes = 0
+
+Dessin : 
+//                \\
+ ///            \\\ 
+   ///        \\\   
+     ///    \\\     
+        //\\        
+        \\\/        
+     \\\    ///     
+   \\\        ///   
+ \\\            /// 
+\\                //
+
+Copie : 
+$ clang++ image.cpp -o main
+image.cpp:59:11: error: redefinition of 'a'
+   59 |     Image a = b;
+      |           ^
+image.cpp:54:11: note: previous definition is here
+   54 |     Image a(20, 19);
+      |           ^
+image.cpp:59:15: error: use of undeclared identifier 'b'
+   59 |     Image a = b;
+      |               ^
+2 errors generated.
+
+Pourquoi :
+Si on avait permis la copie, a et b auraient les menbres "pixels" pointant vers la meme case en memoire. A la fin, le destructeur detruirait le tableau de b ce qui entrainerait celle de a. Par la suite le destructeur trenterait de detruire le tableau de a qui aurrait deja ete rendu. On aura a faire a un crash.
