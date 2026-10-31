@@ -1,0 +1,50 @@
+Prévu :
+main nait
+bloc nait
+fin bloc 1
+bloc meurt
+sans_delete nait
+avec_delete nait
+avec_delete meurt
+fin pointeurs
+deuxieme_bloc1 nait
+deuxieme_bloc2 nait
+fin bloc 2
+deuxieme_bloc2 meurt
+deuxieme_bloc1 meurt
+fonction nait
+fin fonctionfonction meurt
+fin main
+main meurt
+
+Sortie :
+$ ./main
+main nait
+bloc nait
+fin bloc 1
+bloc meurt
+sans_delete nait
+avec_delete nait
+avec_delete meurt
+fin pointeurs
+deuxieme_bloc1 nait
+deuxieme_bloc2 nait
+fin bloc 2
+deuxieme_bloc2 meurt
+deuxieme_bloc1 meurt
+fonction nait
+fin fonctionfonction meurt
+fin main
+main meurt
+
+Explication :
+ - m : nait au debut de main, meurt a la fin du programme
+ - b1 : nait a l'entree du bloc et meurt a sa sortie, fin de sa portee.
+ - *n : nait avec le new dans le tas et ne meurt jamais(fuite).
+ - *nd : nait avec le new dans le tas et meurt apres "delete nd;".
+ - b2 : nait en premier dans le bloc ou elle est declaree et meurt en dernier(LIFO) a la fin du bloc.
+ - b3 : nait en deuxieme et deuxieme et meurt en premier dans le meme bloc. Destruction en ordre inverse de la creation.
+ - f : nait a l'entree de ma_fontion, meurt a sa sortie.
+
+Appel à la main :
+Avec "m.~Trace();", on, libere n deux fois ce qui est une faute grave. si la Trace possédait de la mémoire on la libererait deux fois, ce qui causerait un crash ou une corruption de memoir
