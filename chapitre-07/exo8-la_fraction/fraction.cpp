@@ -40,6 +40,10 @@ int main(){
     printf("2/4 reduit = ");
     d.afficher();printf("\n");
 
+    Fraction s(0, 5);
+    printf("0/5 reduit = ");
+    s.afficher();printf("\n");
+
 
     Fraction e(1, -2);
     printf("1/-2 = ");
