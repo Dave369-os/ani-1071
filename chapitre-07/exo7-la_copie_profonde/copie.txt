@@ -1,0 +1,100 @@
+Copie :
+$ ./main
+Debut : 0 vivantes
+apres creation de a : 1 vivantes
+------a------
+##                  
+ ###                
+   ###              
+     ###            
+        ##          
+          ##        
+            ###     
+              ###   
+                ### 
+                  ##
+------b------
+B#                 B
+ ###                
+   ###              
+     ###            
+        ##          
+          ##        
+            ###     
+              ###   
+                ### 
+                  ##
+apres creation de b : 2 vivantes
+##                  
+ ###                
+   ###              
+     ###            
+        ##          
+          ##        
+            ###     
+              ###   
+                ### 
+                  ##
+apres creation de c : 3 vivantes
+apres bloc : 0 vivantes
+
+Vivantes :
+Debut : 0 vivantes
+apres creation de a : 1 vivantes
+apres creation de b : 2 vivantes
+apres creation de c : 3 vivantes
+apres bloc : 0 vivantes
+
+Sans le test :
+- Lancement 1 : 
+$ ./main
+sans le test : 
+adresse avant a = a : 000001e53aab1550
+adresse apres : 000001e53aab1550
+image apres : 
+É`Æ:Õ½:Õ    
+ ###                
+   ###              
+     ###            
+        ##          
+          ##        
+            ###     
+              ###   
+                ### 
+                  ##
+- Lancement 2 :
+$ ./main
+sans le test : 
+adresse avant a = a : 000001d8bf701550
+adresse apres : 000001d8bf701550
+image apres : 
+É`Z┐Ïp┐Ï    
+ ###                
+   ###              
+     ###            
+        ##          
+          ##        
+            ###     
+              ###   
+                ### 
+                  ##
+
+- Lancement 3 : 
+$ ./main
+sans le test : 
+adresse avant a = a : 00000242082a1550
+adresse apres : 00000242082a1550
+image apres : 
+É`BB    
+ ###                
+   ###              
+     ###            
+        ##          
+          ##        
+            ###     
+              ###   
+                ### 
+                  ##
+
+pourquoi : 
+Sans le test, "delete[] pixels" renvoit pixels deux fois; Elle est utilisee apres sa liberation, ce qui entrainera l'affichage de reste de donnees en memoire par le compilateur.
