@@ -1,0 +1,22 @@
+Avec virtual : 
+$ ./main
+Ennemi : 10
+Robot : 20
+Fantome : 30
+
+Sans virtual : 
+$ ./main
+Ennemi : 60
+Robot : 0
+Fantome : 0
+
+Faute de frappe : 
+- Avec override :
+$ clang++ virtuel.cpp -o main
+virtuel.cpp:15:33: error: only virtual member functions can be marked 'override'
+   15 |         void deplacr(double dt) override {
+      |                                 ^~~~~~~~
+1 error generated.
+
+- Sans override : 
+Aucune erreur.
