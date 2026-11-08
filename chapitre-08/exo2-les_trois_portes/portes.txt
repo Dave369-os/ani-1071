@@ -1,0 +1,36 @@
+Tableau : 
+
+printf("%d", publique);   --------> compile
+printf("%d", protegee);   --------> compile
+printf("%d", privee);     --------> refusé
+printf("%d", d.publique); --------> compile
+printf("%d", d.protegee); --------> refusé
+printf("%d", d.privee);   --------> refusé
+
+Message : 
+$ clang++ portes.cpp -o main
+portes.cpp:18:26: error: 'privee' is a private member of 'Base'
+   18 |             printf("%d", privee);
+      |                          ^
+portes.cpp:10:13: note: declared private here
+   10 |         int privee = 3;
+      |             ^
+portes.cpp:25:20: error: 'protegee' is a protected member of 'Base'
+   25 |     printf("%d", d.protegee);
+      |                    ^
+portes.cpp:8:13: note: declared protected here
+    8 |         int protegee = 2;
+      |             ^
+portes.cpp:26:20: error: 'privee' is a private member of 'Base'
+   26 |     printf("%d", d.privee);
+      |                    ^
+portes.cpp:10:13: note: declared private here
+   10 |         int privee = 3;
+      |             ^
+portes.cpp:28:26: error: function definition is not allowed here
+   28 |     void soigner(Base &b){
+      |                          ^
+4 errors generated.
+
+Fonction : 
+L'execution de la fonction retourne un erreur. Ceci est du au fait que la variable qu'elle essaie d'utiliser est declaree en dans la classe "Base" en protected, ce qui signifie que seules les classes derivees et la classe mere(leurs fontions y compris) elle-meme ont l edroit de modifier ou d'avoir acces a ce type de variable. la fontion "soigner" etant une fonction dite "libre" ici(qui n'appartient a aucune des classes declarees) ne peu donc pas avoir acces au contenu de cette variable.
