@@ -1,0 +1,24 @@
+Tailles : 
+$ ./main
+Vec2        : 16 octet(s)
+const *char : 8 octet(s)
+Entite      : 24 octet(s)
+Joueur      : 32 octet(s)
+Ennemi      : 32 octet(s)
+
+Écarts : 
+    - Entite : faite d'un Vec2 et d'un const char*(16 + 8 = 24). la taille correspond bien a la somme de ses composantes.
+    - Joueur : faite d'un double vie et d'une classe Entite(24 + 4 = 28). Cependant, la taille de la somme ses composantes ici ne correspond pas a a celle donnee par "sizeof()".
+    - Ennemi : faite d'un int degats et d'une classe Entite(24 + 8 = 32), la taille correspond bien a la somme de ses composantes.
+
+puis Message :
+$ clang++ famille.cpp -o main
+famille.cpp:42:12: error: 'position' is a protected member of 'Entite'
+   42 |     ennemi.position = {0, 0};
+      |            ^
+famille.cpp:11:14: note: declared protected here
+   11 |         Vec2 position;
+      |              ^
+1 error generated.
+
+La methode d'Ennemi passe car elle a acces a toutes les variables donc elle a besoin. Le membre position etant mis sou "protected", son accessibilite n'est valable que pour les fonctions et elements midificateurs hors de la classe mere et des classes derivees, d'ou la possibilite de la classe fille "ennemi" de l'utiliser et de la modifier.
