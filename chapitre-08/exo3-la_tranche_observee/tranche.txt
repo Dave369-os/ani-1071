@@ -1,0 +1,13 @@
+Sorties : 
+$ ./main
+entite
+ennemi
+ennemi
+
+Tailles : 
+$ ./main
+Entite : 8 octet(s)
+Ennemi : 16 octet(s)
+
+Pourquoi : 
+La fonction qui se trompe est la fonction f(), son erreur est due au mode de passage qui est par valeur, la fonction en fait ainsi une copie. Sauf que la fonction en fait une copie du type de base(car c'est le type de la variable qui est demande en parametre) et en affiche donc le nom qui est "Ennemi".
