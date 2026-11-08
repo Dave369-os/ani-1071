@@ -1,0 +1,34 @@
+Avec virtual : 
+$ ./main
+~Fantome
+64
+~Trace
+~Ennemi
+~Fantome
+64
+~Trace
+~Ennemi
+
+Sans virtual : 
+$ ./main
+~Fantome
+64
+~Ennemi
+~Fantome
+64
+~Trace
+~Ennemi
+
+Avertissement :
+$ clang++ -Wall -Wextra destructeur.cpp -o main
+destructeur.cpp:27:5: warning: delete called on non-final 'Ennemi' that has virtual functions but non-virtual destructor
+      [-Wdelete-non-abstract-non-virtual-dtor]
+   27 |     delete e;
+      |     ^
+destructeur.cpp:30:5: warning: delete called on non-final 'Fantome' that has virtual functions but non-virtual destructor      [-Wdelete-non-abstract-non-virtual-dtor]
+   30 |     delete f;
+      |     ^
+2 warnings generated.
+
+pourquoi : 
+ce qui n'est jamais detruit est Fantome car le sans "virtual", le programme n'appele que le destrcuteur de la classe de base sans jamais appeler celui de la classe derivee elle-meme.
