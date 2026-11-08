@@ -1,0 +1,38 @@
+Messages : 
+$ clang++ -Wall -Wextra diamant.cpp -o main
+diamant.cpp:34:7: error: non-static member 'position' found in multiple base-class subobjects of type 'Entite':
+    struct Ennemi -> Mobile -> Entite
+    struct Ennemi -> Visible -> Entite
+   34 |     e.position.x = 3.0;
+      |       ^
+diamant.cpp:9:14: note: member found by ambiguous name lookup
+    9 |         Vec2 position;
+      |              ^
+1 error generated.
+
+Tailles : 
+- Sans virtual
+$ ./main
+Entite  : 16 octet(s)
+Mobile  : 32 octet(s)
+Visible : 24 octet(s)
+Ennemi  : 56 octet(s)
+
+- Avec virtual :
+$ ./main
+Entite  : 16 octet(s)
+Mobile  : 40 octet(s)
+Visible : 32 octet(s)
+Ennemi  : 56 octet(s)
+
+Deux position : 
+- Sans virtual : 
+Mobile&  : 3.000000
+Visible& : 0.000000
+
+- Avec virtual : 
+Mobile&  : 3.000000
+Visible& : 3.000000
+
+pourquoi jamais :
+Je ne referai pas ce montage car cela cache deux pointeurs et une indirection a chaque acces, ce qui rend l'execution plus lente.
