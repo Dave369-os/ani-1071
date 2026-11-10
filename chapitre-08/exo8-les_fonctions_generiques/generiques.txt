@@ -1,0 +1,41 @@
+Essais :
+$ ./main
+maximun : 7
+minimum : 3
+clamp(5, 3, 7) : 5
+echange : a = 7, b = 3
+double maximum : 7.200000
+double minimum : 3.500000
+clamp(7.2, 0.0, 5.0) : 5.000000
+Vec2 echanger : u = (3.000000, 4.000000), v = (1.000000, 2.000000)
+Tri string : Yaounde, Zoo, abricot, arbre, zebre,
+
+Messages :
+- maximum(u, v) : 
+$ clang++ -Wall -Wextra generiques.cpp -o main
+generiques.cpp:7:33: error: invalid operands to binary expression ('Vec2' and 'Vec2')
+    7 | T maximum(T a, T b) { return (a > b) ? a : b; }
+      |                               ~ ^ ~
+generiques.cpp:61:5: note: in instantiation of function template specialization 'maximum<Vec2>' requested here
+   61 |     maximum(u, v);
+      |     ^
+1 error generated.
+
+* la ligne designee est "return (a > b) ? a : b;" car le comparateur ">" n'est pas defini pour les objets de type Vec2.
+
+maximum(3, 7.5) : 
+$ clang++ -Wall -Wextra generiques.cpp -o main
+generiques.cpp:61:5: error: no matching function for call to 'maximum'
+   61 |     maximum(3, 7.5);
+      |     ^~~~~~~
+generiques.cpp:7:3: note: candidate template ignored: deduced conflicting types for parameter 'T' ('int' vs. 'double')
+    7 | T maximum(T a, T b) { return (a > b) ? a : b; }
+      |   ^
+1 error generated.
+
+* la ligne designee est l'appel "maximum(3, 7.5);" car le templade ne prend qu'un seul type a la fois selon sa definition.
+
+Tri des chaînes :
+Tri string : Yaounde, Zoo, abricot, arbre, zebre,
+
+ceci est obtenu car std::string compare en ASCII, en majuscule d'abord puis en minuscule.
