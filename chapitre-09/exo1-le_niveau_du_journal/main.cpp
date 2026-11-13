@@ -36,7 +36,7 @@ int main(){
             filtre++;
     }
 
-    std::cout<<"AFFICHES "<<affiche<<"\nFILTRE "<<filtre<<"\n";
+    std::cout<<"AFFICHES "<<affiche<<"\nFILTRES "<<filtre<<"\n";
 
     return 0;
 }
