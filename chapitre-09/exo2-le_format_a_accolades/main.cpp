@@ -40,7 +40,7 @@ int main(){
     
     std::cout<<resultat<<"\n";
     std::cout<<"REMPLACES "<<remplaces<<"\n";
-    std::cout<<"REMPLACES "<<manquants<<"\n";
+    std::cout<<"MANQUANTS "<<manquants<<"\n";
 
     return 0;
 }
