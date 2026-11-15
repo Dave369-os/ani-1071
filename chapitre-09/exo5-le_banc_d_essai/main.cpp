@@ -29,9 +29,12 @@ std::string verification(std::string type, int attendu, int obtenu){
         if(attendu <= obtenu) return "OK";
         else return "ECHEC";
     }
-    else{
+    else if(type == "GREATER_EQUAL"){
         if(attendu >= obtenu) return "OK";
         else return "ECHEC";
+    }
+    else{
+        return"ECHEC";
     }
 }
 
@@ -45,9 +48,6 @@ int main(){
     for(int i = 0; i < nbr_assert; i++){
         std::string Type; int Attendu, Obtenu;
         std::cin>>Type>>Attendu>>Obtenu;
-        if(Type != "EQUAL" && Type != "NOT_EQUAL" && Type != "LESS" && Type != "GREATER" && Type != "LESS_EQUAL" && Type != "GREATER_EQUAL"){
-            echec++;
-        }
         Assertions[i].type = Type;
         Assertions[i].attendu = Attendu;
         Assertions[i].obtenu = Obtenu;
