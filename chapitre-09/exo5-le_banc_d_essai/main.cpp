@@ -45,6 +45,7 @@ int main(){
         std::string Type; int Attendu, Obtenu;
         std::cin>>Type>>Attendu>>Obtenu;
         if(Type != "EQUAL" && Type != "NOT_EQUAL" && Type != "LESS" && Type != "GREATER" && Type != "LESS_EQUAL" && Type != "GREATER_EQUAL"){
+            std::cout<<"ERREUR\n";
             return 0;
         }
         Assertions[i].type = Type;
