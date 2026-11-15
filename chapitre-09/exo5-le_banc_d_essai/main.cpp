@@ -39,21 +39,20 @@ int main(){
     int nbr_assert;
     std::cin>>nbr_assert;
     std::vector<assertion> Assertions(nbr_assert);
+    int reussis = 0, echec = 0;
 
     //Remplissage du tableau
     for(int i = 0; i < nbr_assert; i++){
         std::string Type; int Attendu, Obtenu;
         std::cin>>Type>>Attendu>>Obtenu;
         if(Type != "EQUAL" && Type != "NOT_EQUAL" && Type != "LESS" && Type != "GREATER" && Type != "LESS_EQUAL" && Type != "GREATER_EQUAL"){
-            std::cout<<"ERREUR\n";
-            return 0;
+            echec++;
         }
         Assertions[i].type = Type;
         Assertions[i].attendu = Attendu;
         Assertions[i].obtenu = Obtenu;
     }
 
-    int reussis = 0, echec = 0;
     for(int i = 0; i < nbr_assert; i++){
         std::string resultat = verification(Assertions[i].type, Assertions[i].attendu, Assertions[i].obtenu);
         if(resultat == "OK"){
