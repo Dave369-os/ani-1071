@@ -27,7 +27,7 @@ int main(){
     std::vector<int> cntDefGlobal;
     for(int i = 0; i < n; i++){
         for(int j = 0; j < (int)f[i].defNom.size(); j++){
-            if(f[i].defStatic[j] == 2) continue;
+            if(f[i].defStatic[j] == 1) continue;
             std::string nom = f[i].defNom[j];
             int idx = -1;
             for(int k = 0; k < (int)vuDefGlobal.size(); k++) if(vuDefGlobal[k] == nom) idx = k;
