@@ -58,7 +58,7 @@ int main(){
     long long total_sans = 0, total_avec = 0;
 
     for(int i = 1; i < nbr_fichier; i++){
-        std::cout<<fichiers[i].nom<<" "<<cntSans[i]<<cntAvec[i]<<"\n";
+        std::cout<<fichiers[i].nom<<" "<<cntSans[i]<<" "<<cntAvec[i]<<"\n";
         total_sans += cntSans[i];
         total_avec += cntAvec[i];
     }
