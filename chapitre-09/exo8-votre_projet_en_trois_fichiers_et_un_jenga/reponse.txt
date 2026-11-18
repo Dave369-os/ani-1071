@@ -1,0 +1,74 @@
+Ce que j'ai mis dans le .h et pourquoi :
+Dans le .h, j'ai ajoute "#pragma once", j'ai fait cela pour empecher que son contenu ne soit inclu plusieurs fois.
+
+
+Le message exact quand j'ai appele l'aide depuis main :
+user@nkcode:~/Ani1071> jenga build
+
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║                ██╗███████╗███╗   ██╗ ██████╗  █████╗             ║
+║                ██║██╔════╝████╗  ██║██╔════╝ ██╔══██╗            ║
+║                ██║█████╗  ██╔██╗ ██║██║  ███╗███████║            ║
+║           ██   ██║██╔══╝  ██║╚██╗██║██║   ██║██╔══██║            ║
+║           ╚█████╔╝███████╗██║ ╚████║╚██████╔╝██║  ██║            ║
+║            ╚════╝ ╚══════╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝            ║
+║                                                                  ║
+║             Multi-platform C/C++ Build System v2.10.3             ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+Loading workspace...
+
+Configuration: Debug
+Target:        Windows x86_64
+Toolchain:     clang-mingw
+
+Build Order (1 projects):
+  1. Ani1071 [CONSOLE_APP]
+
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════╗
+║  Project: Ani1071                                                         Kind: CONSOLE_APP  ║
+╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+
+ℹ Found 2 source file(s)
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                 Compilation Error: main.cpp                                  ║
+╠══════════════════════════════════════════════════════════════════════════════════════════════╣
+║ D:\anime\z\ani-1071\ani-1071\chapitre-09\exo8-votre_projet_en_trois_fichiers_et_un_jenga\Ani ║
+║ 1071\src\main.cpp:12:5: error: use of undeclared identifier 'carre'                          ║
+║    12 |     carre(5);                                                                        ║
+║       |     ^                                                                                ║
+║ 1 error generated.                                                                           ║
+╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+
+✗ ✗ Compilation failed: D:\anime\z\ani-1071\ani-1071\chapitre-09\exo8-votre_projet_en_trois_fichiers_et_un_jenga\Ani1071\src\main.cpp
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+│  ✗ Build Failed                                                                 Time: 2.87s  │
+│ Errors: 2  | Failed files: 1                                                                 │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘
+
+════════════════════════════════════════════════════════════════════════════════
+                                  BUILD FAILED
+════════════════════════════════════════════════════════════════════════════════
+Projects Built:  0/1
+Failed:         1
+Errors:         2
+Time:           2.87s
+Status:         ✗ FAILURE
+════════════════════════════════════════════════════════════════════════════════
+
+Echecs (1) — a corriger :
+  ✗ Ani1071
+
+
+Les deux lignes du .jenga que j'ai ajoutees, et ce que chacune remplace :
+les deux lignes que j'ai ajoutees sont : 
+"includedirs(["include"])"
+"files(["src/main.cpp", "src/vec2.cpp"])"
+
+la ligne includedirs permet d'indiquer le(s) fichier(s) a rechercher dd plus pour les en-tetes.
+la ligne files permet d'indiquer les lignes a rechercher pour la compilation.
