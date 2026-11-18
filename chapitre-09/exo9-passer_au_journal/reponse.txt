@@ -1,0 +1,8 @@
+Les printf que j'ai gardes, et pourquoi : 
+J'ai garder "printf("Bienvenue aux jouers\n");" et "printf("Bien joue!\n");", car ce sont des informations qui affichent un resultat visible a l'ecran pour notifier l'utilisateur, il ne seront pas utilises par le constructeur.
+
+Ce que le journal ajoute que printf ne donnait pas :
+Le journal ajoute la date, l'heure, le fichier compile et la ligne ou est le signalement, ce que printf ne sait pas faire.
+
+Pourquoi mon Debug ne s'affiche pas :
+Debug ne s'affiche pas car son niveau est filtre par le configuration par defaut du journal.

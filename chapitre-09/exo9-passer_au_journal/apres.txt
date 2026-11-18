@@ -1,0 +1,9 @@
+[NKLogger] niveau=info | console=debug | journal=D:\anime\z\ani-1071\ani-1071\chapitre-09\exo9-passer_au_journal\Ani1071\logs\app.log
+[NKLogger] trace/debug sont SOUS le niveau : NK_LOG_LEVEL=debug pour les voir ; NK_LOG_CONSOLE=1 pour tout mettre a l'ecran ; NK_LOG_QUIET=1 pour taire ces deux lignes.
+[2026-11-18 14:33:32.546] [INF] [Ani1071] [thread 7700] [main.cpp:6 in 546108] -> Demarrage du jeu au niveau 2
+Bienvenue aux jouers
+[2026-11-18 14:33:32.547] [INF] [Ani1071] [thread 7700] [main.cpp:8 in 547102] -> le chronometre lance
+[2026-11-18 14:33:32.548] [WRN] [Ani1071] [thread 7700] [main.cpp:9 in 548105] -> Arrive du boss final
+[2026-11-18 14:33:32.549] [INF] [Ani1071] [thread 7700] [main.cpp:10 in 549103] -> joueur 2 recupere 10 pieces
+[2026-11-18 14:33:32.549] [INF] [Ani1071] [thread 7700] [main.cpp:11 in 549103] -> Fin de partie
+Bien joue!

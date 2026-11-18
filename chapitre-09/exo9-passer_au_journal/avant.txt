@@ -1,0 +1,6 @@
+Demarrage du jeu
+Recuperation d'un objet
+chronometre lance
+Arrive du boss final
+guerison du jouer
+Fin de partie
