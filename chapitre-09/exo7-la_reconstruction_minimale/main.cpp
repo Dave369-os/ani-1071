@@ -56,7 +56,7 @@ int main(){
             A_reconstruire++;
         }
         else{
-            std::cout<<Cibles[i].nom<<" A jour\n";
+            std::cout<<Cibles[i].nom<<" A JOUR\n";
             A_jour++;
         }
     }
