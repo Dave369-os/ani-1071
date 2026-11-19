@@ -60,7 +60,7 @@ int main(){
 
         if(choix == -1){
             std::cout<<"CYCLE\n";
-            std::cout<<"PROJETS\n";
+            std::cout<<"PROJETS 0\n";
             return 0;
         }
 
