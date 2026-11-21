@@ -18,11 +18,12 @@ int main(){
     int position = 0;
     for(int i = 0; i < 2*k; i = i+2){
         int axe = valeurs[i+1] - valeurs[i];
-        position += axe * pas;
-        if(position != 0){
-        deplacement += abs(position);
-        }
-        else immobile++;
+        int variation = axe * pas;
+        position += variation;
+        deplacement += abs(variation);
+        
+        if(axe == 0) immobile++;
+
         std::cout<<axe<<" "<<position<<"\n";
     }
 
