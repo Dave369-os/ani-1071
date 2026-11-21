@@ -24,6 +24,12 @@ int main(){
             std::cout<<i+1<<" "<<pas_efectues<<" "<<seau<<"\n";
         }
     }
+    else{
+        for(int i =0; i < k; i++){
+            seau = seau + durees[i];
+            std::cout<<i+1<<" "<<pas<<" "<<seau<<"\n";
+        }
+    }
 
     std::cout<<"PAS TOTAL "<<pas_total<<"\n";
     std::cout<<"RESTE FINAL "<<seau<<"\n";
