@@ -26,19 +26,20 @@ int main(){
             dureeAvec = plafond;
             plafonnage++;
         }
+
+        resteAvec += dureeAvec;
+        resteSans += images[i];
         
         long long pasAvec = 0;
         long long pasSans = 0;
 
         if(pas != 0){
-            resteAvec += dureeAvec;
             pasAvec = resteAvec / pas;
             resteAvec %= pas;
             totalAvec += pasAvec;
         
 
             //sans plafond
-            resteSans += images[i];
             pasSans = resteSans / pas;
             resteSans %= pas;
             totalSans += pasSans;
