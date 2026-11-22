@@ -1,0 +1,8 @@
+Ce que j'ai vu au premier clic sur la croix :
+Au premier clic, la fenetre ne se ferme pas, aucun changement n'est obseve sur la fenetre.
+
+Comment j'ai du arreter le programme sans Close :
+j'ai arrete le programme en le tuant de force avec un "ctrl + c" dans le terminal choisi pour NKcode.
+
+A quoi sert concretement ce detour :
+Ce detour sert a separer la demande et l'action. Cela permet de refuser la fermer le programe, meme si la fenetre a un probleme/bug. Il permet donc de ne pas dependre de la fenetre pour quitter. i

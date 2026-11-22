@@ -1,0 +1,40 @@
+journal avec Close():
+
+[NKLogger] niveau=info | console=debug | journal=D:\anime\z\ani-1071\ani-1071\chapitre-10\exo8-une_fenetre_qui_refuse_de_se_fermer\fenetre\logs\app.log
+[NKLogger] trace/debug sont SOUS le niveau : NK_LOG_LEVEL=debug pour les voir ; NK_LOG_CONSOLE=1 pour tout mettre a l'ecran ; NK_LOG_QUIET=1 pour taire ces deux lignes.
+[2026-11-22 15:16:17.204] [INF] [default] [main.cpp:25 in nkmain] -> Ouverture de la fenetre : 954 x 523.
+[2026-11-22 15:16:22.851] [INF] [default] [main.cpp:31 in operator()] -> Clic numero 1
+[2026-11-22 15:16:27.332] [INF] [default] [main.cpp:31 in operator()] -> Clic numero 2
+[2026-11-22 15:16:27.333] [INF] [default] [main.cpp:34 in operator()] -> Deuxieme clic, Fermeture...
+[2026-11-22 15:16:27.356] [INF] [default] [main.cpp:50 in nkmain] -> Fermeture propre apres 883 tours.
+
+
+
+
+
+
+
+journal sans close():
+
+[NKLogger] niveau=info | console=debug | journal=D:\anime\z\ani-1071\ani-1071\chapitre-10\exo8-une_fenetre_qui_refuse_de_se_fermer\fenetre\logs\app.log
+[NKLogger] trace/debug sont SOUS le niveau : NK_LOG_LEVEL=debug pour les voir ; NK_LOG_CONSOLE=1 pour tout mettre a l'ecran ; NK_LOG_QUIET=1 pour taire ces deux lignes.
+[2026-11-22 15:34:51.463] [INF] [default] [main.cpp:25 in nkmain] -> Ouverture de la fenetre : 954 x 523.
+[2026-11-22 15:34:53.715] [INF] [default] [main.cpp:31 in operator()] -> Clic numero 1
+[2026-11-22 15:34:53.716] [INF] [default] [main.cpp:37 in operator()] -> Premier clic, fermeture refusee.
+[2026-11-22 15:34:55.181] [INF] [default] [main.cpp:31 in operator()] -> Clic numero 2
+[2026-11-22 15:34:55.186] [INF] [default] [main.cpp:34 in operator()] -> Deuxieme clic, Fermeture...
+[2026-11-22 15:34:55.858] [INF] [default] [main.cpp:31 in operator()] -> Clic numero 3
+[2026-11-22 15:34:55.860] [INF] [default] [main.cpp:34 in operator()] -> Deuxieme clic, Fermeture...
+[2026-11-22 15:34:56.866] [INF] [default] [main.cpp:31 in operator()] -> Clic numero 4
+[2026-11-22 15:34:56.869] [INF] [default] [main.cpp:34 in operator()] -> Deuxieme clic, Fermeture...
+[2026-11-22 15:34:58.746] [INF] [default] [main.cpp:31 in operator()] -> Clic numero 5
+[2026-11-22 15:34:58.747] [INF] [default] [main.cpp:34 in operator()] -> Deuxieme clic, Fermeture...
+[2026-11-22 15:34:59.836] [INF] [default] [main.cpp:31 in operator()] -> Clic numero 6
+[2026-11-22 15:34:59.837] [INF] [default] [main.cpp:34 in operator()] -> Deuxieme clic, Fermeture...
+[2026-11-22 15:35:00.339] [INF] [default] [main.cpp:31 in operator()] -> Clic numero 7
+[2026-11-22 15:35:00.340] [INF] [default] [main.cpp:34 in operator()] -> Deuxieme clic, Fermeture...
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ◀  FIN D'EXECUTION  —  termine avec le code 3221225786  (27.40s)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+^CTerminer le programme de commandes (O/N) ? ^Co
