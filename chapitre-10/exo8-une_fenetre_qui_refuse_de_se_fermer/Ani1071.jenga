@@ -6,7 +6,7 @@
 
 from Jenga import *
 
-with workspace("fenetre"):
+with workspace("Ani1071"):
     configurations(['Debug', 'Release'])
     targetoses([TargetOS.WINDOWS, TargetOS.LINUX, TargetOS.MACOS])
     targetarchs([TargetArch.X86_64])
@@ -32,7 +32,7 @@ with workspace("fenetre"):
     with project("fenetre"):
         consoleapp()
         language("C++")
-        location("fenetre")
+        location("Ani1071")
         files(["main.cpp"])
         usenklogger()
         usenkwindow()
