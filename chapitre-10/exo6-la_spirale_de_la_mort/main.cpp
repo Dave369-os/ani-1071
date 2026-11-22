@@ -27,17 +27,22 @@ int main(){
             plafonnage++;
         }
         
-        resteAvec += dureeAvec;
-        long long pasAvec = resteAvec / pas;
-        resteAvec %= pas;
-        totalAvec += pasAvec;
+        long long pasAvec = 0;
+        long long pasSans = 0;
+
+        if(pas != 0){
+            resteAvec += dureeAvec;
+            pasAvec = resteAvec / pas;
+            resteAvec %= pas;
+            totalAvec += pasAvec;
         
 
-        //sans plafond
-        resteSans += images[i];
-        long long pasSans = resteSans / pas;
-        resteSans %= pas;
-        totalSans += pasSans;
+            //sans plafond
+            resteSans += images[i];
+            pasSans = resteSans / pas;
+            resteSans %= pas;
+            totalSans += pasSans;
+        }
 
         std::cout<<i+1<<" "<<pasAvec<<" "<<pasSans<<"\n";
     }
