@@ -42,7 +42,7 @@ int main(){
         int nbTouches;
         std::cin>>nbTouches;
         std::vector<std::string> enfoncees;
-        for(int j = 0; i < nbTouches; i++){
+        for(int j = 0; j < nbTouches; i++){
             std::string t; std::cin>>t;
             enfoncees.push_back(t);
         }
