@@ -6,7 +6,7 @@ int main(){
     std::cin>>largeur>>hauteur;
     int nbrPoints;
     std::cin>>nbrPoints;
-    std::vector<std::vector<float>> Points(nbrPoints, std::vector<float>(2));
+    std::vector<std::vector<int>> Points(nbrPoints, std::vector<int>(2));
 
     for(int i = 0; i < nbrPoints; i++){
         std::cin>>Points[i][0]>>Points[i][1];
@@ -16,7 +16,7 @@ int main(){
     for(int i = 0; i < nbrPoints; i++){
         int ecranY = hauteur - 1 - Points[i][1];
         std::cout<<Points[i][0]<<" "<<ecranY<<"\n";
-        if(ecranY >= 0 && ecranY <= largeur - 1 && Points[i][0] >= 0 && Points[i][0] <= largeur){
+        if(ecranY >= 0 && ecranY <= hauteur - 1 && Points[i][0] >= 0 && Points[i][0] <= largeur){
             dedans++;
         }
         else{hors_ecran++;}
