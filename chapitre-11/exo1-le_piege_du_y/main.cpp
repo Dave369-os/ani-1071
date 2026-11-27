@@ -16,7 +16,7 @@ int main(){
     for(int i = 0; i < nbrPoints; i++){
         int ecranY = hauteur - 1 - Points[i][1];
         std::cout<<Points[i][0]<<" "<<ecranY<<"\n";
-        if(ecranY >= 0 && ecranY <= hauteur - 1 && Points[i][0] >= 0 && Points[i][0] <= largeur){
+        if(ecranY >= 0 && ecranY <= hauteur - 1 && Points[i][0] >= 0 && Points[i][0] <= largeur - 1){
             dedans++;
         }
         else{hors_ecran++;}
