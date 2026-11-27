@@ -10,49 +10,50 @@ int main(){
         std::cin>>Operations[i];
     }
     int images = 0, perdus = 0;
-    bool clear = 0, display = 0;
+    bool clear = 0;
+    int DessinsEnAttente = 0;
 
     std::vector<std::string> affiches(k);
 
     for(int i = 0; i < k; i++){
-        if(Operations[i] == "CLEAR" && clear == 0){
-            //std::cout<<"ouverte\n";
+      if(Operations[i] == "CLEAR"){
+        if(clear == false){
             affiches[i] = "ouverte";
-            clear = 1;
-        }
-        else if(Operations[i] == "CLEAR" && clear == 1){
-            //std::cout<<"rouverte\n";
-            affiches[i] = "rouverte";
-            for(int j = 0; j < i; j++){
-                if(affiches[j] == "ouverte"){affiches[j] = "perdu";}
+        }else{affiches[i] = "rouverte"; perdus += DessinsEnAttente;}
+        clear = true;
+        DessinsEnAttente = 0;
+      }
+        else if(Operations[i] == "DESSIN"){
+            if(clear == true){
+                affiches[i] = "dessine";
+                DessinsEnAttente++;
+            }else{
+                affiches[i] = "perdu";
+                perdus++;
             }
         }
+        else if(Operations[i] == "DISPLAY") {
+            if(clear == true){
+                affiches[i] = "presentee";
+                images++;
 
-        if(Operations[i] == "DESSIN" && clear == 1){
-            //std::cout<<"dessine\n";
-            affiches[i] = "dessine";
+                clear = false;
+                DessinsEnAttente = 0;
+            }else{
+                affiches[i] = "ignoree";
+            }
         }
-        else if(Operations[i] == "DESSIN" && clear == 0){
-            //std::cout<<"perdu\n";
-            affiches[i] = "perdu";
-            perdus++;
-        }
+      }
 
-        if(Operations[i] == "DISPLAY" && clear == 1){
-            //std::cout<<"presentee\n";
-            affiches[i] = "presentee";
-            clear = 0;
-            images++;
-        }
-        else if(Operations[i] == "DISPLAY" && clear == 0){
-            //std::cout<<"ignoree\n";
-            affiches[i] = "ignoree";
-        }
-    }
+      if(clear == true){
+        perdus += DessinsEnAttente;
+      }
 
     for(int i = 0; i < k; i++){
         std::cout<<affiches[i]<<"\n";
     }
+
+   
     std::cout<<"IMAGES "<<images<<"\n";
     std::cout<<"PERDUS "<<perdus<<"\n";
 
